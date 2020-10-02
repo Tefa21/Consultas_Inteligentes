@@ -66,6 +66,7 @@
             this.btnGuardarCreacion.Text = "Buscar";
             this.btnGuardarCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardarCreacion.UseVisualStyleBackColor = true;
+            this.btnGuardarCreacion.Click += new System.EventHandler(this.btnGuardarCreacion_Click);
             // 
             // dgvCamposCreacion
             // 
@@ -74,21 +75,25 @@
             this.clmCampo});
             this.dgvCamposCreacion.Location = new System.Drawing.Point(18, 31);
             this.dgvCamposCreacion.Name = "dgvCamposCreacion";
+            this.dgvCamposCreacion.RowHeadersWidth = 51;
             this.dgvCamposCreacion.Size = new System.Drawing.Size(227, 240);
             this.dgvCamposCreacion.TabIndex = 20;
+            this.dgvCamposCreacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCamposCreacion_CellClick);
             // 
             // clmCampo
             // 
             this.clmCampo.Frozen = true;
             this.clmCampo.HeaderText = "Campos";
+            this.clmCampo.MinimumWidth = 6;
             this.clmCampo.Name = "clmCampo";
             this.clmCampo.ReadOnly = true;
+            this.clmCampo.Width = 125;
             // 
             // txtValorCreacion
             // 
             this.txtValorCreacion.Location = new System.Drawing.Point(324, 136);
             this.txtValorCreacion.Name = "txtValorCreacion";
-            this.txtValorCreacion.Size = new System.Drawing.Size(194, 20);
+            this.txtValorCreacion.Size = new System.Drawing.Size(194, 24);
             this.txtValorCreacion.TabIndex = 7;
             // 
             // lblValorCreacion
@@ -96,7 +101,7 @@
             this.lblValorCreacion.AutoSize = true;
             this.lblValorCreacion.Location = new System.Drawing.Point(370, 114);
             this.lblValorCreacion.Name = "lblValorCreacion";
-            this.lblValorCreacion.Size = new System.Drawing.Size(100, 13);
+            this.lblValorCreacion.Size = new System.Drawing.Size(124, 17);
             this.lblValorCreacion.TabIndex = 7;
             this.lblValorCreacion.Text = "Valor a Comparar";
             // 
@@ -105,7 +110,7 @@
             this.rbtnIgualCreacion.AutoSize = true;
             this.rbtnIgualCreacion.Location = new System.Drawing.Point(274, 137);
             this.rbtnIgualCreacion.Name = "rbtnIgualCreacion";
-            this.rbtnIgualCreacion.Size = new System.Drawing.Size(32, 17);
+            this.rbtnIgualCreacion.Size = new System.Drawing.Size(38, 21);
             this.rbtnIgualCreacion.TabIndex = 2;
             this.rbtnIgualCreacion.TabStop = true;
             this.rbtnIgualCreacion.Text = "=";
@@ -116,7 +121,7 @@
             this.rbtnMayorCreacion.AutoSize = true;
             this.rbtnMayorCreacion.Location = new System.Drawing.Point(274, 114);
             this.rbtnMayorCreacion.Name = "rbtnMayorCreacion";
-            this.rbtnMayorCreacion.Size = new System.Drawing.Size(32, 17);
+            this.rbtnMayorCreacion.Size = new System.Drawing.Size(38, 21);
             this.rbtnMayorCreacion.TabIndex = 1;
             this.rbtnMayorCreacion.TabStop = true;
             this.rbtnMayorCreacion.Text = ">";
@@ -127,7 +132,7 @@
             this.rbtnMenorCreacion.AutoSize = true;
             this.rbtnMenorCreacion.Location = new System.Drawing.Point(274, 160);
             this.rbtnMenorCreacion.Name = "rbtnMenorCreacion";
-            this.rbtnMenorCreacion.Size = new System.Drawing.Size(32, 17);
+            this.rbtnMenorCreacion.Size = new System.Drawing.Size(38, 21);
             this.rbtnMenorCreacion.TabIndex = 0;
             this.rbtnMenorCreacion.TabStop = true;
             this.rbtnMenorCreacion.Text = "<";
@@ -152,7 +157,7 @@
             // 
             // frmUsuarioNormal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 310);
             this.Controls.Add(this.gbxCamposCreacion);
