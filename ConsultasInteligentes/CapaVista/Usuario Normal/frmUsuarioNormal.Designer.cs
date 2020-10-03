@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarioNormal));
             this.btnCancelarCreacion = new System.Windows.Forms.Button();
-            this.btnGuardarCreacion = new System.Windows.Forms.Button();
+            this.btnBuscarCreacion = new System.Windows.Forms.Button();
             this.dgvCamposCreacion = new System.Windows.Forms.DataGridView();
             this.clmCampo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtValorCreacion = new System.Windows.Forms.TextBox();
@@ -55,18 +55,18 @@
             this.btnCancelarCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelarCreacion.UseVisualStyleBackColor = true;
             // 
-            // btnGuardarCreacion
+            // btnBuscarCreacion
             // 
-            this.btnGuardarCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarCreacion.Image")));
-            this.btnGuardarCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarCreacion.Location = new System.Drawing.Point(324, 235);
-            this.btnGuardarCreacion.Name = "btnGuardarCreacion";
-            this.btnGuardarCreacion.Size = new System.Drawing.Size(85, 36);
-            this.btnGuardarCreacion.TabIndex = 21;
-            this.btnGuardarCreacion.Text = "Buscar";
-            this.btnGuardarCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCreacion.UseVisualStyleBackColor = true;
-            this.btnGuardarCreacion.Click += new System.EventHandler(this.btnGuardarCreacion_Click);
+            this.btnBuscarCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCreacion.Image")));
+            this.btnBuscarCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarCreacion.Location = new System.Drawing.Point(324, 235);
+            this.btnBuscarCreacion.Name = "btnBuscarCreacion";
+            this.btnBuscarCreacion.Size = new System.Drawing.Size(85, 36);
+            this.btnBuscarCreacion.TabIndex = 21;
+            this.btnBuscarCreacion.Text = "Buscar";
+            this.btnBuscarCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarCreacion.UseVisualStyleBackColor = true;
+            this.btnBuscarCreacion.Click += new System.EventHandler(this.btnBuscarCreacion_Click);
             // 
             // dgvCamposCreacion
             // 
@@ -147,7 +147,7 @@
             this.gbxCamposCreacion.Controls.Add(this.lblValorCreacion);
             this.gbxCamposCreacion.Controls.Add(this.rbtnMenorCreacion);
             this.gbxCamposCreacion.Controls.Add(this.rbtnIgualCreacion);
-            this.gbxCamposCreacion.Controls.Add(this.btnGuardarCreacion);
+            this.gbxCamposCreacion.Controls.Add(this.btnBuscarCreacion);
             this.gbxCamposCreacion.Location = new System.Drawing.Point(12, 12);
             this.gbxCamposCreacion.Name = "gbxCamposCreacion";
             this.gbxCamposCreacion.Size = new System.Drawing.Size(540, 286);
@@ -176,8 +176,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnCancelarCreacion;
-        private System.Windows.Forms.Button btnGuardarCreacion;
-        private System.Windows.Forms.DataGridView dgvCamposCreacion;
+        private System.Windows.Forms.Button btnBuscarCreacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCampo;
         private System.Windows.Forms.TextBox txtValorCreacion;
         private System.Windows.Forms.Label lblValorCreacion;
@@ -185,5 +184,6 @@
         private System.Windows.Forms.RadioButton rbtnMayorCreacion;
         private System.Windows.Forms.RadioButton rbtnMenorCreacion;
         private System.Windows.Forms.GroupBox gbxCamposCreacion;
+        public System.Windows.Forms.DataGridView dgvCamposCreacion;
     }
 }

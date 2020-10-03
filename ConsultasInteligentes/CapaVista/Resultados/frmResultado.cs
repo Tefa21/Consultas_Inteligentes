@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CapaControlador;
 namespace CapaVista.Resultados
 {
     public partial class frmResultado : Form
@@ -15,6 +15,15 @@ namespace CapaVista.Resultados
         public frmResultado()
         {
             InitializeComponent();
+        }
+        clsControlador cont = new clsControlador();
+        private void frmResultado_Load(object sender, EventArgs e)
+        {
+
+            DataTable dt = cont.ejecucionConsulta(clsDatoConsulta.consulta);
+            dgvDatosMostrar.DataSource = dt;
+
+
         }
     }
 }
