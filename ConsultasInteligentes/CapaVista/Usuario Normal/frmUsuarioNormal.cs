@@ -26,7 +26,7 @@ namespace CapaVista.Usuario_Normal
         //variable que obtiene el dato del dgvCamposCreacion
         string campo;
         //nombre de la tabla de prueba
-        string tabla="ESTADO_CIVIL";
+        string tabla="EMPLEADO";
 
         public frmUsuarioNormal()
         {
@@ -38,72 +38,34 @@ namespace CapaVista.Usuario_Normal
         public void actualizardatagriew()
         {
 
-            
+            DataSet Datos = cont.llenarCampos(tabla);
 
-
-            //creacion de la conexion via ODBC
-            OdbcConnection conn = new OdbcConnection("Dsn=Prueba");
-            try
-            {
-                conn.Open();
-            }
-            catch (OdbcException)
-            {
-                Console.WriteLine("No Conectó");
-            }
-
-
-            //DataTable dt = cont.llenarCampos(tabla);
-            //dgvCamposCreacion.DataSource = dt;
             //ciclo que recorre la fila de las columnas hasta que ya no hayan más
-            //for (int i = 0; i < dt.DataSet.Tables[0].Columns.Count; i++)
-            //{
-                 //se agregan los nombres de las columnas al dgvCamposCreacion
-            //    dgvCamposCreacion.Rows.Add(dt.DataSet.Tables[0].Columns[i].ColumnName);
-
-            //}
-
-            try
-            {
-
-                string MostrarEmpleados = "SELECT * FROM " + tabla;
-
-                OdbcCommand Query_SELECT = new OdbcCommand(MostrarEmpleados, conn);
-
-                OdbcDataAdapter adaptador = new OdbcDataAdapter(Query_SELECT);
-
-
-                DataSet ds = new DataSet();
-                adaptador.Fill(ds);
-
-                //ciclo que recorre la fila de las columnas hasta que ya no hayan más
-                for (int i = 0; i < ds.Tables[0].Columns.Count; i++)
+            for (int i = 0; i < Datos.Tables[0].Columns.Count; i++)
                 {
                     //se agregan los nombres de las columnas al dgvCamposCreacion
-                    dgvCamposCreacion.Rows.Add(ds.Tables[0].Columns[i].ColumnName);
+                    dgvCamposCreacion.Rows.Add(Datos.Tables[0].Columns[i].ColumnName);
 
                 }
-
-            }
-            catch (Exception ex)
-            {
-
-                Console.WriteLine("Error al ejecutar SQL: " +
-                    System.Environment.NewLine + System.Environment.NewLine +
-                    ex.GetType().ToString() + System.Environment.NewLine +
-                    ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-
-
         }
 
 
         public void dgvCamposCreacion_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //variable que obtiene el contenido de la celda a la que se le dió clic en dgvCamposCreacion
-            campo = dgvCamposCreacion.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            try
+            {
+                //variable que obtiene el contenido de la celda a la que se le dió clic en dgvCamposCreacion
+                campo = dgvCamposCreacion.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                     System.Environment.NewLine + System.Environment.NewLine +
+                     ex.GetType().ToString() + System.Environment.NewLine +
+                     ex.Message, "Error",
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+    
         }
 
 
@@ -144,6 +106,11 @@ namespace CapaVista.Usuario_Normal
                 frmSr.Show();
             }
 
+        }
+
+        private void btnCancelarCreacion_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.Odbc;
 using System.Collections;
-
+using System.Windows.Forms;
 
 namespace CapaModelo
 {
@@ -16,12 +16,32 @@ namespace CapaModelo
         clsConexion conexion = new clsConexion();
 
 
-        public OdbcDataAdapter llenarCampos(string tabla)// metodo  que obtinene el contenio de una tabla
+        public DataSet llenarCampos(string tabla)// metodo  que obtinene el contenio de una tabla
         {
-           
-            string Query_SELECT = "SELECT * FROM " + tabla;
-            OdbcDataAdapter dataTable = new OdbcDataAdapter(Query_SELECT, conexion.conexion());
-            return dataTable;
+
+            DataSet Campos = new DataSet();
+
+            try
+            {
+                string Query_SELECT = "SELECT * FROM " + tabla;
+                OdbcCommand Ejecucion_Query = new OdbcCommand(Query_SELECT, conexion.conexion());
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+
+                Lector.SelectCommand = Ejecucion_Query;
+                Lector.Fill(Campos);
+
+                return Campos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                     System.Environment.NewLine + System.Environment.NewLine +
+                     ex.GetType().ToString() + System.Environment.NewLine +
+                     ex.Message, "Error",
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Campos;
+            }
+            
 
         }
 

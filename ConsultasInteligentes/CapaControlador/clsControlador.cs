@@ -16,19 +16,10 @@ namespace CapaControlador
         clsConsultas cons = new clsConsultas();
 
 
-        public DataTable llenarCampos(string tabla)
+        public DataSet llenarCampos(string tabla)
         {
-            OdbcDataAdapter dt = cons.llenarCampos(tabla);
-                        DataTable table = new DataTable();
-            //DataSet ds = new DataSet();
-            //ds.Tables.Add(table);
-          
-            dt.Fill(table);
-
-
-            return table;
-            
-
+            DataSet Items = cons.llenarCampos(tabla);
+            return Items;
         }
 
         public DataTable ejecucionConsulta(string consulta)
@@ -40,13 +31,6 @@ namespace CapaControlador
             return table;
 
         }
-
-
-
-
-
-
-
 
     }
 }

@@ -47,19 +47,20 @@
             // 
             this.btnCancelarCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarCreacion.Image")));
             this.btnCancelarCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelarCreacion.Location = new System.Drawing.Point(428, 235);
+            this.btnCancelarCreacion.Location = new System.Drawing.Point(454, 235);
             this.btnCancelarCreacion.Name = "btnCancelarCreacion";
             this.btnCancelarCreacion.Size = new System.Drawing.Size(90, 36);
             this.btnCancelarCreacion.TabIndex = 22;
             this.btnCancelarCreacion.Text = "Cancelar";
             this.btnCancelarCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelarCreacion.UseVisualStyleBackColor = true;
+            this.btnCancelarCreacion.Click += new System.EventHandler(this.btnCancelarCreacion_Click);
             // 
             // btnBuscarCreacion
             // 
             this.btnBuscarCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCreacion.Image")));
             this.btnBuscarCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarCreacion.Location = new System.Drawing.Point(324, 235);
+            this.btnBuscarCreacion.Location = new System.Drawing.Point(350, 235);
             this.btnBuscarCreacion.Name = "btnBuscarCreacion";
             this.btnBuscarCreacion.Size = new System.Drawing.Size(85, 36);
             this.btnBuscarCreacion.TabIndex = 21;
@@ -70,13 +71,27 @@
             // 
             // dgvCamposCreacion
             // 
+            this.dgvCamposCreacion.AllowUserToAddRows = false;
+            this.dgvCamposCreacion.AllowUserToDeleteRows = false;
+            this.dgvCamposCreacion.AllowUserToResizeRows = false;
+            this.dgvCamposCreacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCamposCreacion.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvCamposCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCamposCreacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvCamposCreacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCamposCreacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCamposCreacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmCampo});
             this.dgvCamposCreacion.Location = new System.Drawing.Point(18, 31);
+            this.dgvCamposCreacion.MultiSelect = false;
             this.dgvCamposCreacion.Name = "dgvCamposCreacion";
+            this.dgvCamposCreacion.ReadOnly = true;
+            this.dgvCamposCreacion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvCamposCreacion.RowHeadersVisible = false;
             this.dgvCamposCreacion.RowHeadersWidth = 51;
-            this.dgvCamposCreacion.Size = new System.Drawing.Size(227, 240);
+            this.dgvCamposCreacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvCamposCreacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCamposCreacion.Size = new System.Drawing.Size(267, 240);
             this.dgvCamposCreacion.TabIndex = 20;
             this.dgvCamposCreacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCamposCreacion_CellClick);
             // 
@@ -87,30 +102,30 @@
             this.clmCampo.MinimumWidth = 6;
             this.clmCampo.Name = "clmCampo";
             this.clmCampo.ReadOnly = true;
-            this.clmCampo.Width = 125;
+            this.clmCampo.Width = 74;
             // 
             // txtValorCreacion
             // 
-            this.txtValorCreacion.Location = new System.Drawing.Point(324, 136);
+            this.txtValorCreacion.Location = new System.Drawing.Point(350, 136);
             this.txtValorCreacion.Name = "txtValorCreacion";
-            this.txtValorCreacion.Size = new System.Drawing.Size(194, 24);
+            this.txtValorCreacion.Size = new System.Drawing.Size(194, 20);
             this.txtValorCreacion.TabIndex = 7;
             // 
             // lblValorCreacion
             // 
             this.lblValorCreacion.AutoSize = true;
-            this.lblValorCreacion.Location = new System.Drawing.Point(370, 114);
+            this.lblValorCreacion.Location = new System.Drawing.Point(396, 114);
             this.lblValorCreacion.Name = "lblValorCreacion";
-            this.lblValorCreacion.Size = new System.Drawing.Size(124, 17);
+            this.lblValorCreacion.Size = new System.Drawing.Size(100, 13);
             this.lblValorCreacion.TabIndex = 7;
             this.lblValorCreacion.Text = "Valor a Comparar";
             // 
             // rbtnIgualCreacion
             // 
             this.rbtnIgualCreacion.AutoSize = true;
-            this.rbtnIgualCreacion.Location = new System.Drawing.Point(274, 137);
+            this.rbtnIgualCreacion.Location = new System.Drawing.Point(300, 137);
             this.rbtnIgualCreacion.Name = "rbtnIgualCreacion";
-            this.rbtnIgualCreacion.Size = new System.Drawing.Size(38, 21);
+            this.rbtnIgualCreacion.Size = new System.Drawing.Size(32, 17);
             this.rbtnIgualCreacion.TabIndex = 2;
             this.rbtnIgualCreacion.TabStop = true;
             this.rbtnIgualCreacion.Text = "=";
@@ -119,9 +134,9 @@
             // rbtnMayorCreacion
             // 
             this.rbtnMayorCreacion.AutoSize = true;
-            this.rbtnMayorCreacion.Location = new System.Drawing.Point(274, 114);
+            this.rbtnMayorCreacion.Location = new System.Drawing.Point(300, 114);
             this.rbtnMayorCreacion.Name = "rbtnMayorCreacion";
-            this.rbtnMayorCreacion.Size = new System.Drawing.Size(38, 21);
+            this.rbtnMayorCreacion.Size = new System.Drawing.Size(32, 17);
             this.rbtnMayorCreacion.TabIndex = 1;
             this.rbtnMayorCreacion.TabStop = true;
             this.rbtnMayorCreacion.Text = ">";
@@ -130,9 +145,9 @@
             // rbtnMenorCreacion
             // 
             this.rbtnMenorCreacion.AutoSize = true;
-            this.rbtnMenorCreacion.Location = new System.Drawing.Point(274, 160);
+            this.rbtnMenorCreacion.Location = new System.Drawing.Point(300, 160);
             this.rbtnMenorCreacion.Name = "rbtnMenorCreacion";
-            this.rbtnMenorCreacion.Size = new System.Drawing.Size(38, 21);
+            this.rbtnMenorCreacion.Size = new System.Drawing.Size(32, 17);
             this.rbtnMenorCreacion.TabIndex = 0;
             this.rbtnMenorCreacion.TabStop = true;
             this.rbtnMenorCreacion.Text = "<";
@@ -150,16 +165,16 @@
             this.gbxCamposCreacion.Controls.Add(this.btnBuscarCreacion);
             this.gbxCamposCreacion.Location = new System.Drawing.Point(12, 12);
             this.gbxCamposCreacion.Name = "gbxCamposCreacion";
-            this.gbxCamposCreacion.Size = new System.Drawing.Size(540, 286);
+            this.gbxCamposCreacion.Size = new System.Drawing.Size(565, 286);
             this.gbxCamposCreacion.TabIndex = 13;
             this.gbxCamposCreacion.TabStop = false;
             this.gbxCamposCreacion.Text = "Campos de la Consulta";
             // 
             // frmUsuarioNormal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 310);
+            this.ClientSize = new System.Drawing.Size(589, 310);
             this.Controls.Add(this.gbxCamposCreacion);
             this.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
@@ -184,6 +199,6 @@
         private System.Windows.Forms.RadioButton rbtnMayorCreacion;
         private System.Windows.Forms.RadioButton rbtnMenorCreacion;
         private System.Windows.Forms.GroupBox gbxCamposCreacion;
-        public System.Windows.Forms.DataGridView dgvCamposCreacion;
+        private System.Windows.Forms.DataGridView dgvCamposCreacion;
     }
 }

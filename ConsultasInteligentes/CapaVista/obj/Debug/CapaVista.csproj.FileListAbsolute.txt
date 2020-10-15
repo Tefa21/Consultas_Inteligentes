@@ -55,3 +55,5 @@ C:\Users\TheVolts\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Deb
 C:\Users\TheVolts\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
 C:\Users\TheVolts\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.dll
 C:\Users\TheVolts\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.pdb
+C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.dll
+C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.pdb
