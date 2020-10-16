@@ -1099,7 +1099,8 @@
             this.Controls.Add(this.tbcConsultaNormal);
             this.MaximizeBox = false;
             this.Name = "frmUsuarioAvanzado";
-            this.Text = "frmUsuarioAvanzado";
+            this.Text = "Consultas Inteligentes";
+            this.Load += new System.EventHandler(this.frmUsuarioAvanzado_Load);
             this.tbpMantenimientoConsulta.ResumeLayout(false);
             this.tbpMantenimientoConsulta.PerformLayout();
             this.groupBox4.ResumeLayout(false);

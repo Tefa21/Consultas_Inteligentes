@@ -22,6 +22,12 @@ namespace CapaControlador
             return Items;
         }
 
+        public DataTable ItemsTablas()
+        {
+            DataTable Items = cons.llenarCmbTablas();
+            return Items;
+        }
+
         public DataTable ejecucionConsulta(string consulta)
         {
 
