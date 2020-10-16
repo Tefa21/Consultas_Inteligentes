@@ -52,7 +52,35 @@ namespace CapaModelo
             return tablaDatos;
         }
 
+        public DataTable llenarCmbTablas()
+        {
+            DataTable Datos = new DataTable();
 
+            try
+            {
+
+                string CargaDepa = "SHOW TABLES";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaDepa, conexion.conexion());
+
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Busqueda1;
+                Lector.Fill(Datos);
+                return Datos;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return Datos;
+
+            }
+
+        }
 
 
     }
