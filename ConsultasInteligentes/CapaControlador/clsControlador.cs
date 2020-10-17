@@ -38,5 +38,11 @@ namespace CapaControlador
 
         }
 
+        public DataTable ItemsCampos(string tabla)
+        {
+            DataTable Campos = cons.llenarCmbCampos(tabla);
+            return Campos;
+        }
+
     }
 }
