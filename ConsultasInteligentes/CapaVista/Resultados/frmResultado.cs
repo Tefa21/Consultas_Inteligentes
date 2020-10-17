@@ -20,7 +20,7 @@ namespace CapaVista.Resultados
         private void frmResultado_Load(object sender, EventArgs e)
         {
 
-            DataTable dt = cont.ejecucionConsulta(clsDatoConsulta.consulta);
+            DataTable dt = cont.funcEjecucionConsulta(clsDatoConsulta.consulta);
             dgvDatosMostrar.DataSource = dt;
 
 

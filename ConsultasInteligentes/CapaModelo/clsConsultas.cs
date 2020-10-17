@@ -16,7 +16,7 @@ namespace CapaModelo
         clsConexion conexion = new clsConexion();
 
 
-        public DataSet llenarCampos(string tabla)// metodo  que obtinene el contenio de una tabla
+        public DataSet funcLlenarCampos(string tabla)// metodo  que obtinene el contenio de una tabla
         {
 
             DataSet Campos = new DataSet();
@@ -24,7 +24,7 @@ namespace CapaModelo
             try
             {
                 string Query_SELECT = "SELECT * FROM " + tabla;
-                OdbcCommand Ejecucion_Query = new OdbcCommand(Query_SELECT, conexion.conexion());
+                OdbcCommand Ejecucion_Query = new OdbcCommand(Query_SELECT, conexion.funcConexion());
                 OdbcDataAdapter Lector = new OdbcDataAdapter();
 
                 Lector.SelectCommand = Ejecucion_Query;
@@ -45,14 +45,16 @@ namespace CapaModelo
 
         }
 
-        public OdbcDataAdapter ejecucionConsulta(string consulta)
+        
+
+        public OdbcDataAdapter funcEjecucionConsulta(string consulta)
         {
             string Query_SELECT = consulta;
-            OdbcDataAdapter tablaDatos = new OdbcDataAdapter(Query_SELECT, conexion.conexion());
+            OdbcDataAdapter tablaDatos = new OdbcDataAdapter(Query_SELECT, conexion.funcConexion());
             return tablaDatos;
         }
 
-        public DataTable llenarCmbTablas()
+        public DataTable funcLlenarCmbTablas()
         {
             DataTable Datos = new DataTable();
 
@@ -60,7 +62,7 @@ namespace CapaModelo
             {
 
                 string CargaDepa = "SHOW TABLES";
-                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaDepa, conexion.conexion());
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaDepa, conexion.funcConexion());
 
                 OdbcDataAdapter Lector = new OdbcDataAdapter();
                 Lector.SelectCommand = Query_Busqueda1;
@@ -82,14 +84,14 @@ namespace CapaModelo
 
         }
 
-        public DataTable llenarCmbCampos(string tabla)
+        public DataTable funcLlenarCmbCampos(string tabla)
         {
             DataTable Datos = new DataTable();
 
             try 
             {
-                string CargaCampos = "select * from Information_Schema.Columns WHERE TABLE_NAME = " + tabla;
-                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaCampos, conexion.conexion());
+                string CargaCampos = "select * from Information_Schema.Columns WHERE TABLE_NAME = '"+ tabla + "'";
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaCampos, conexion.funcConexion());
 
                 OdbcDataAdapter Lector = new OdbcDataAdapter();
                 Lector.SelectCommand = Query_Busqueda1;
