@@ -16,24 +16,24 @@ namespace CapaVista.Usuario_Avanzado
         public frmUsuarioAvanzado()
         {
             InitializeComponent();
-            Tablas();
+            funcTablas();
         }
 
         clsControlador Cont = new clsControlador();
 
-        public void Tablas()
+        public void funcTablas()
         {
-            DataTable Datos = Cont.ItemsTablas();
+            DataTable Datos = Cont.funcItemsTablas();
             cmbTablasCreacion.DisplayMember = Datos.Columns[0].ToString();
             cmbTablasCreacion.DataSource = Datos;
             cmbTablasCreacion.ResetText();
             dgvTablasCreacion.Enabled = false;
         }
 
-        public void Campos()
+        public void funcCampos()
         {
             string tabla = cmbTablasCreacion.Text;
-            DataTable Campos = Cont.ItemsCampos(tabla);
+            DataTable Campos = Cont.funcItemsCampos(tabla);
             cmbCampoCreacion.DisplayMember = Campos.Columns[0].ToString();
             cmbCampoCreacion.DataSource = Campos;
             cmbCampoCreacion.ResetText();
