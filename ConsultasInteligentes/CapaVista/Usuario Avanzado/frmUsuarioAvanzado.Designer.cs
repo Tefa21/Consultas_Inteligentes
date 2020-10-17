@@ -75,6 +75,9 @@
             this.btnQuitarTablaEditar = new System.Windows.Forms.Button();
             this.lblTablaEditar = new System.Windows.Forms.Label();
             this.tbpCreacionConsulta = new System.Windows.Forms.TabPage();
+            this.dgvCamposCreacion = new System.Windows.Forms.DataGridView();
+            this.clmCampo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmAlias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbxCondiciones = new System.Windows.Forms.GroupBox();
@@ -93,23 +96,19 @@
             this.rbtnMenorCreacion = new System.Windows.Forms.RadioButton();
             this.btnCancelarCreacion = new System.Windows.Forms.Button();
             this.btnGuardarCreacion = new System.Windows.Forms.Button();
-            this.dgvCamposCreacion = new System.Windows.Forms.DataGridView();
-            this.clmCampo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxAgruparCreacion = new System.Windows.Forms.GroupBox();
             this.cmbCampoAgruparCreacion = new System.Windows.Forms.ComboBox();
             this.lblCampAgruparCreacion = new System.Windows.Forms.Label();
             this.txtNombreCreacion = new System.Windows.Forms.TextBox();
             this.lblNombreCreacion = new System.Windows.Forms.Label();
-            this.dgvTablasCreacion = new System.Windows.Forms.DataGridView();
-            this.clmTabla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxOrdenCreacion = new System.Windows.Forms.GroupBox();
             this.rbtnMenorMayorCreacion = new System.Windows.Forms.RadioButton();
             this.rbtnASCCreacion = new System.Windows.Forms.RadioButton();
             this.gbxCamposCreacion = new System.Windows.Forms.GroupBox();
+            this.chkTodosCamp = new System.Windows.Forms.CheckBox();
             this.txtAliasCreacion = new System.Windows.Forms.TextBox();
             this.lblAliasCreacion = new System.Windows.Forms.Label();
             this.btnAgregarCampoCreacion = new System.Windows.Forms.Button();
-            this.rbtnTodosCamposCreacion = new System.Windows.Forms.RadioButton();
             this.btnQuitarCampoCreacion = new System.Windows.Forms.Button();
             this.cmbCampoCreacion = new System.Windows.Forms.ComboBox();
             this.lblCampoCreacion = new System.Windows.Forms.Label();
@@ -119,6 +118,8 @@
             this.btnQuitarTablaCreacion = new System.Windows.Forms.Button();
             this.lblTablaCreacion = new System.Windows.Forms.Label();
             this.tbcConsultaNormal = new System.Windows.Forms.TabControl();
+            this.dgvTablasCreacion = new System.Windows.Forms.DataGridView();
+            this.clmTabla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpMantenimientoConsulta.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -130,16 +131,16 @@
             this.gbxCamposEditar.SuspendLayout();
             this.gbxConsultaEditar.SuspendLayout();
             this.tbpCreacionConsulta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCamposCreacion)).BeginInit();
             this.gbxCondiciones.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbxComparacionCreacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCamposCreacion)).BeginInit();
             this.gbxAgruparCreacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTablasCreacion)).BeginInit();
             this.gbxOrdenCreacion.SuspendLayout();
             this.gbxCamposCreacion.SuspendLayout();
             this.gbxTablasCreacion.SuspendLayout();
             this.tbcConsultaNormal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablasCreacion)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpMantenimientoConsulta
@@ -160,7 +161,7 @@
             this.tbpMantenimientoConsulta.Controls.Add(this.gbxConsultaEditar);
             this.tbpMantenimientoConsulta.Location = new System.Drawing.Point(4, 22);
             this.tbpMantenimientoConsulta.Name = "tbpMantenimientoConsulta";
-            this.tbpMantenimientoConsulta.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpMantenimientoConsulta.Padding = new System.Windows.Forms.Padding(3);
             this.tbpMantenimientoConsulta.Size = new System.Drawing.Size(792, 485);
             this.tbpMantenimientoConsulta.TabIndex = 2;
             this.tbpMantenimientoConsulta.Text = "Editar Consulta";
@@ -624,26 +625,68 @@
             // 
             // tbpCreacionConsulta
             // 
+            this.tbpCreacionConsulta.Controls.Add(this.dgvTablasCreacion);
+            this.tbpCreacionConsulta.Controls.Add(this.dgvCamposCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.textBox1);
             this.tbpCreacionConsulta.Controls.Add(this.label1);
             this.tbpCreacionConsulta.Controls.Add(this.gbxCondiciones);
             this.tbpCreacionConsulta.Controls.Add(this.btnCancelarCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.btnGuardarCreacion);
-            this.tbpCreacionConsulta.Controls.Add(this.dgvCamposCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.gbxAgruparCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.txtNombreCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.lblNombreCreacion);
-            this.tbpCreacionConsulta.Controls.Add(this.dgvTablasCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.gbxOrdenCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.gbxCamposCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.gbxTablasCreacion);
             this.tbpCreacionConsulta.Location = new System.Drawing.Point(4, 22);
             this.tbpCreacionConsulta.Name = "tbpCreacionConsulta";
-            this.tbpCreacionConsulta.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpCreacionConsulta.Padding = new System.Windows.Forms.Padding(3);
             this.tbpCreacionConsulta.Size = new System.Drawing.Size(792, 485);
             this.tbpCreacionConsulta.TabIndex = 0;
             this.tbpCreacionConsulta.Text = "Creación de Consulta";
             this.tbpCreacionConsulta.UseVisualStyleBackColor = true;
+            // 
+            // dgvCamposCreacion
+            // 
+            this.dgvCamposCreacion.AllowUserToAddRows = false;
+            this.dgvCamposCreacion.AllowUserToDeleteRows = false;
+            this.dgvCamposCreacion.AllowUserToResizeRows = false;
+            this.dgvCamposCreacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCamposCreacion.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvCamposCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCamposCreacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvCamposCreacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvCamposCreacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCamposCreacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmCampo,
+            this.clmAlias});
+            this.dgvCamposCreacion.Location = new System.Drawing.Point(544, 46);
+            this.dgvCamposCreacion.MultiSelect = false;
+            this.dgvCamposCreacion.Name = "dgvCamposCreacion";
+            this.dgvCamposCreacion.ReadOnly = true;
+            this.dgvCamposCreacion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvCamposCreacion.RowHeadersVisible = false;
+            this.dgvCamposCreacion.RowHeadersWidth = 51;
+            this.dgvCamposCreacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvCamposCreacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCamposCreacion.Size = new System.Drawing.Size(214, 134);
+            this.dgvCamposCreacion.TabIndex = 21;
+            // 
+            // clmCampo
+            // 
+            this.clmCampo.Frozen = true;
+            this.clmCampo.HeaderText = "Campos";
+            this.clmCampo.MinimumWidth = 6;
+            this.clmCampo.Name = "clmCampo";
+            this.clmCampo.ReadOnly = true;
+            this.clmCampo.Width = 70;
+            // 
+            // clmAlias
+            // 
+            this.clmAlias.HeaderText = "Alias";
+            this.clmAlias.Name = "clmAlias";
+            this.clmAlias.ReadOnly = true;
+            this.clmAlias.Width = 54;
             // 
             // textBox1
             // 
@@ -685,6 +728,7 @@
             this.button1.Text = "Agregar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -837,26 +881,6 @@
             this.btnGuardarCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardarCreacion.UseVisualStyleBackColor = true;
             // 
-            // dgvCamposCreacion
-            // 
-            this.dgvCamposCreacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCamposCreacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmCampo});
-            this.dgvCamposCreacion.Location = new System.Drawing.Point(531, 46);
-            this.dgvCamposCreacion.Name = "dgvCamposCreacion";
-            this.dgvCamposCreacion.RowHeadersWidth = 51;
-            this.dgvCamposCreacion.Size = new System.Drawing.Size(227, 134);
-            this.dgvCamposCreacion.TabIndex = 8;
-            // 
-            // clmCampo
-            // 
-            this.clmCampo.Frozen = true;
-            this.clmCampo.HeaderText = "Campos";
-            this.clmCampo.MinimumWidth = 6;
-            this.clmCampo.Name = "clmCampo";
-            this.clmCampo.ReadOnly = true;
-            this.clmCampo.Width = 125;
-            // 
             // gbxAgruparCreacion
             // 
             this.gbxAgruparCreacion.Controls.Add(this.cmbCampoAgruparCreacion);
@@ -901,26 +925,6 @@
             this.lblNombreCreacion.TabIndex = 5;
             this.lblNombreCreacion.Text = "Nombre de la Consulta";
             // 
-            // dgvTablasCreacion
-            // 
-            this.dgvTablasCreacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTablasCreacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmTabla});
-            this.dgvTablasCreacion.Location = new System.Drawing.Point(313, 46);
-            this.dgvTablasCreacion.Name = "dgvTablasCreacion";
-            this.dgvTablasCreacion.RowHeadersWidth = 51;
-            this.dgvTablasCreacion.Size = new System.Drawing.Size(191, 134);
-            this.dgvTablasCreacion.TabIndex = 4;
-            // 
-            // clmTabla
-            // 
-            this.clmTabla.Frozen = true;
-            this.clmTabla.HeaderText = "Tablas";
-            this.clmTabla.MinimumWidth = 6;
-            this.clmTabla.Name = "clmTabla";
-            this.clmTabla.ReadOnly = true;
-            this.clmTabla.Width = 125;
-            // 
             // gbxOrdenCreacion
             // 
             this.gbxOrdenCreacion.Controls.Add(this.rbtnMenorMayorCreacion);
@@ -956,10 +960,10 @@
             // 
             // gbxCamposCreacion
             // 
+            this.gbxCamposCreacion.Controls.Add(this.chkTodosCamp);
             this.gbxCamposCreacion.Controls.Add(this.txtAliasCreacion);
             this.gbxCamposCreacion.Controls.Add(this.lblAliasCreacion);
             this.gbxCamposCreacion.Controls.Add(this.btnAgregarCampoCreacion);
-            this.gbxCamposCreacion.Controls.Add(this.rbtnTodosCamposCreacion);
             this.gbxCamposCreacion.Controls.Add(this.btnQuitarCampoCreacion);
             this.gbxCamposCreacion.Controls.Add(this.cmbCampoCreacion);
             this.gbxCamposCreacion.Controls.Add(this.lblCampoCreacion);
@@ -970,9 +974,20 @@
             this.gbxCamposCreacion.TabStop = false;
             this.gbxCamposCreacion.Text = "Campos de la Consulta";
             // 
+            // chkTodosCamp
+            // 
+            this.chkTodosCamp.AutoSize = true;
+            this.chkTodosCamp.Location = new System.Drawing.Point(67, 26);
+            this.chkTodosCamp.Name = "chkTodosCamp";
+            this.chkTodosCamp.Size = new System.Drawing.Size(113, 17);
+            this.chkTodosCamp.TabIndex = 10;
+            this.chkTodosCamp.Text = "Todos los Campos";
+            this.chkTodosCamp.UseVisualStyleBackColor = true;
+            this.chkTodosCamp.CheckedChanged += new System.EventHandler(this.chkTodosCamp_CheckedChanged);
+            // 
             // txtAliasCreacion
             // 
-            this.txtAliasCreacion.Location = new System.Drawing.Point(67, 57);
+            this.txtAliasCreacion.Location = new System.Drawing.Point(67, 84);
             this.txtAliasCreacion.Name = "txtAliasCreacion";
             this.txtAliasCreacion.Size = new System.Drawing.Size(164, 20);
             this.txtAliasCreacion.TabIndex = 8;
@@ -980,7 +995,7 @@
             // lblAliasCreacion
             // 
             this.lblAliasCreacion.AutoSize = true;
-            this.lblAliasCreacion.Location = new System.Drawing.Point(17, 60);
+            this.lblAliasCreacion.Location = new System.Drawing.Point(17, 87);
             this.lblAliasCreacion.Name = "lblAliasCreacion";
             this.lblAliasCreacion.Size = new System.Drawing.Size(29, 13);
             this.lblAliasCreacion.TabIndex = 9;
@@ -997,17 +1012,7 @@
             this.btnAgregarCampoCreacion.Text = "Agregar";
             this.btnAgregarCampoCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarCampoCreacion.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTodosCamposCreacion
-            // 
-            this.rbtnTodosCamposCreacion.AutoSize = true;
-            this.rbtnTodosCamposCreacion.Location = new System.Drawing.Point(93, 83);
-            this.rbtnTodosCamposCreacion.Name = "rbtnTodosCamposCreacion";
-            this.rbtnTodosCamposCreacion.Size = new System.Drawing.Size(112, 17);
-            this.rbtnTodosCamposCreacion.TabIndex = 8;
-            this.rbtnTodosCamposCreacion.TabStop = true;
-            this.rbtnTodosCamposCreacion.Text = "Todos los Campos";
-            this.rbtnTodosCamposCreacion.UseVisualStyleBackColor = true;
+            this.btnAgregarCampoCreacion.Click += new System.EventHandler(this.btnAgregarCampoCreacion_Click);
             // 
             // btnQuitarCampoCreacion
             // 
@@ -1020,11 +1025,12 @@
             this.btnQuitarCampoCreacion.Text = "Quitar";
             this.btnQuitarCampoCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuitarCampoCreacion.UseVisualStyleBackColor = true;
+            this.btnQuitarCampoCreacion.Click += new System.EventHandler(this.btnQuitarCampoCreacion_Click);
             // 
             // cmbCampoCreacion
             // 
             this.cmbCampoCreacion.FormattingEnabled = true;
-            this.cmbCampoCreacion.Location = new System.Drawing.Point(67, 30);
+            this.cmbCampoCreacion.Location = new System.Drawing.Point(67, 57);
             this.cmbCampoCreacion.Name = "cmbCampoCreacion";
             this.cmbCampoCreacion.Size = new System.Drawing.Size(164, 21);
             this.cmbCampoCreacion.TabIndex = 7;
@@ -1032,7 +1038,7 @@
             // lblCampoCreacion
             // 
             this.lblCampoCreacion.AutoSize = true;
-            this.lblCampoCreacion.Location = new System.Drawing.Point(16, 33);
+            this.lblCampoCreacion.Location = new System.Drawing.Point(16, 60);
             this.lblCampoCreacion.Name = "lblCampoCreacion";
             this.lblCampoCreacion.Size = new System.Drawing.Size(40, 13);
             this.lblCampoCreacion.TabIndex = 6;
@@ -1105,6 +1111,38 @@
             this.tbcConsultaNormal.Size = new System.Drawing.Size(800, 511);
             this.tbcConsultaNormal.TabIndex = 1;
             // 
+            // dgvTablasCreacion
+            // 
+            this.dgvTablasCreacion.AllowUserToAddRows = false;
+            this.dgvTablasCreacion.AllowUserToDeleteRows = false;
+            this.dgvTablasCreacion.AllowUserToResizeRows = false;
+            this.dgvTablasCreacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvTablasCreacion.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvTablasCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTablasCreacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvTablasCreacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTablasCreacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTablasCreacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmTabla});
+            this.dgvTablasCreacion.Location = new System.Drawing.Point(313, 46);
+            this.dgvTablasCreacion.MultiSelect = false;
+            this.dgvTablasCreacion.Name = "dgvTablasCreacion";
+            this.dgvTablasCreacion.ReadOnly = true;
+            this.dgvTablasCreacion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTablasCreacion.RowHeadersVisible = false;
+            this.dgvTablasCreacion.RowHeadersWidth = 51;
+            this.dgvTablasCreacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvTablasCreacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTablasCreacion.Size = new System.Drawing.Size(225, 134);
+            this.dgvTablasCreacion.TabIndex = 22;
+            // 
+            // clmTabla
+            // 
+            this.clmTabla.HeaderText = "Tabla";
+            this.clmTabla.Name = "clmTabla";
+            this.clmTabla.ReadOnly = true;
+            this.clmTabla.Width = 59;
+            // 
             // frmUsuarioAvanzado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1134,15 +1172,14 @@
             this.gbxConsultaEditar.PerformLayout();
             this.tbpCreacionConsulta.ResumeLayout(false);
             this.tbpCreacionConsulta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCamposCreacion)).EndInit();
             this.gbxCondiciones.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbxComparacionCreacion.ResumeLayout(false);
             this.gbxComparacionCreacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCamposCreacion)).EndInit();
             this.gbxAgruparCreacion.ResumeLayout(false);
             this.gbxAgruparCreacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTablasCreacion)).EndInit();
             this.gbxOrdenCreacion.ResumeLayout(false);
             this.gbxOrdenCreacion.PerformLayout();
             this.gbxCamposCreacion.ResumeLayout(false);
@@ -1150,6 +1187,7 @@
             this.gbxTablasCreacion.ResumeLayout(false);
             this.gbxTablasCreacion.PerformLayout();
             this.tbcConsultaNormal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablasCreacion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1160,14 +1198,11 @@
         private System.Windows.Forms.TabPage tbpCreacionConsulta;
         private System.Windows.Forms.Button btnCancelarCreacion;
         private System.Windows.Forms.Button btnGuardarCreacion;
-        private System.Windows.Forms.DataGridView dgvCamposCreacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCampo;
         private System.Windows.Forms.GroupBox gbxAgruparCreacion;
         private System.Windows.Forms.ComboBox cmbCampoAgruparCreacion;
         private System.Windows.Forms.Label lblCampAgruparCreacion;
         private System.Windows.Forms.TextBox txtNombreCreacion;
         private System.Windows.Forms.Label lblNombreCreacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTabla;
         private System.Windows.Forms.GroupBox gbxOrdenCreacion;
         private System.Windows.Forms.RadioButton rbtnMenorMayorCreacion;
         private System.Windows.Forms.RadioButton rbtnASCCreacion;
@@ -1183,7 +1218,6 @@
         private System.Windows.Forms.TextBox txtAliasCreacion;
         private System.Windows.Forms.Label lblAliasCreacion;
         private System.Windows.Forms.Button btnAgregarCampoCreacion;
-        private System.Windows.Forms.RadioButton rbtnTodosCamposCreacion;
         private System.Windows.Forms.Button btnQuitarCampoCreacion;
         private System.Windows.Forms.ComboBox cmbCampoCreacion;
         private System.Windows.Forms.Label lblCampoCreacion;
@@ -1245,6 +1279,11 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.CheckBox chkTodosCamp;
+        private System.Windows.Forms.DataGridView dgvCamposCreacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCampo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmAlias;
         private System.Windows.Forms.DataGridView dgvTablasCreacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTabla;
     }
 }

@@ -45,6 +45,8 @@ namespace CapaModelo
 
         }
 
+        
+
         public OdbcDataAdapter funcEjecucionConsulta(string consulta)
         {
             string Query_SELECT = consulta;
@@ -88,7 +90,7 @@ namespace CapaModelo
 
             try 
             {
-                string CargaCampos = "select * from Information_Schema.Columns WHERE TABLE_NAME = " + tabla;
+                string CargaCampos = "select * from Information_Schema.Columns WHERE TABLE_NAME = '"+ tabla + "'";
                 OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaCampos, conexion.funcConexion());
 
                 OdbcDataAdapter Lector = new OdbcDataAdapter();

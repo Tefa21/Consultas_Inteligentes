@@ -21,6 +21,7 @@ namespace CapaControlador
             DataSet Items = cons.funcLlenarCampos(tabla);
             return Items;
         }
+  
 
         public DataTable funcItemsTablas()
         {

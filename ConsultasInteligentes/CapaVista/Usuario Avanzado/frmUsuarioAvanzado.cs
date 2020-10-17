@@ -13,6 +13,8 @@ namespace CapaVista.Usuario_Avanzado
 {
     public partial class frmUsuarioAvanzado : Form
     {
+        
+
         public frmUsuarioAvanzado()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace CapaVista.Usuario_Avanzado
 
         clsControlador Cont = new clsControlador();
 
-        public void funcTablas()
+        private void funcTablas()
         {
             DataTable Datos = Cont.funcItemsTablas();
             cmbTablasCreacion.DisplayMember = Datos.Columns[0].ToString();
@@ -30,14 +32,34 @@ namespace CapaVista.Usuario_Avanzado
             dgvTablasCreacion.Enabled = false;
         }
 
-        public void funcCampos()
+        private void funcCampos()
         {
             string tabla = cmbTablasCreacion.Text;
             DataTable Campos = Cont.funcItemsCampos(tabla);
-            cmbCampoCreacion.DisplayMember = Campos.Columns[0].ToString();
+            cmbCampoCreacion.DisplayMember = Campos.Columns[3].ToString();
             cmbCampoCreacion.DataSource = Campos;
             cmbCampoCreacion.ResetText();
 
+        }
+        private void funcLlenarCmb() {
+
+            DataTable dt = new DataTable();
+            dt.Clear();
+            cmbCampoComparacionCreacion.Items.Clear();
+            cmbCampoAgruparCreacion.Items.Clear();
+            dt.Columns.Add("clmCampo", typeof(System.String));
+            foreach (DataGridViewRow rowGrid in dgvCamposCreacion.Rows)
+            {
+                DataRow row = dt.NewRow();
+                row["clmCampo"] = Convert.ToString(rowGrid.Cells[0].Value);
+
+                dt.Rows.Add(row);
+            }
+            foreach (DataRow row in dt.Rows)
+            {
+                cmbCampoComparacionCreacion.Items.Add(row[0].ToString());
+                cmbCampoAgruparCreacion.Items.Add(row[0].ToString());
+            }
         }
 
         private void frmUsuarioAvanzado_Load(object sender, EventArgs e)
@@ -48,7 +70,7 @@ namespace CapaVista.Usuario_Avanzado
         private void btnAgregarTablaCreacion_Click(object sender, EventArgs e)
         {
 
-            if (dgvTablasCreacion.RowCount > 0)
+            if (dgvTablasCreacion.RowCount > -1)
             {
                 // Primero averigua si el registro existe:
                 bool existe = false;
@@ -63,27 +85,87 @@ namespace CapaVista.Usuario_Avanzado
                 }
                 if (existe == false)
                 {
-                    dgvTablasCreacion.AutoGenerateColumns = false;
-                    DataGridViewRow row = (DataGridViewRow)dgvTablasCreacion.Rows[0].Clone();
-                    row.Cells[0].Value = cmbTablasCreacion.Text;
-                    dgvTablasCreacion.Rows.Add(row);
+                    
+                    dgvTablasCreacion.Rows.Add(cmbTablasCreacion.Text);
+                    cmbTablasCreacion.Enabled = false;
+                    btnAgregarTablaCreacion.Enabled = false;
+                    funcCampos();
                 }
             }
         }
 
         private void btnQuitarTablaCreacion_Click(object sender, EventArgs e)
         {
-            if (dgvTablasCreacion.SelectedRows.Count > -1)
+            if (dgvTablasCreacion.SelectedRows.Count > 0)
             {
-                for (int i = 0; i < dgvTablasCreacion.RowCount; i++)
-                {
-                    if (Convert.ToString(dgvTablasCreacion.Rows[i].Cells["clmTabla"].Value) == cmbTablasCreacion.Text)
+                dgvTablasCreacion.Rows.Remove(dgvTablasCreacion.CurrentRow);
+                cmbTablasCreacion.Enabled = true;
+                btnAgregarTablaCreacion.Enabled = true;
+                cmbCampoCreacion.Text = "";
+                txtAliasCreacion.Text = "";
+                dgvCamposCreacion.Rows.Clear();
+            }
+
+        }
+
+        private void btnAgregarCampoCreacion_Click(object sender, EventArgs e)
+        {
+            if (chkTodosCamp.Checked == true) {
+
+                dgvCamposCreacion.Rows.Add("*", "Todos los campos");
+                funcLlenarCmb();
+            }
+            else{
+                if(cmbCampoCreacion.Text!=""||txtAliasCreacion.Text != ""){
+                    // Primero averigua si el registro existe:
+                    bool existe = false;
+                    for (int i = 0; i < dgvCamposCreacion.RowCount; i++)
                     {
-                        dgvTablasCreacion.Rows.Remove(dgvTablasCreacion.Rows[i]);
+                        if (Convert.ToString(dgvCamposCreacion.Rows[i].Cells["clmCampo"].Value) == cmbCampoCreacion.Text)
+                        {
+                            MessageBox.Show("La tabla ya esta ingresada");
+                            existe = true;
+                            break;
+                        }
+                    }
+                    if (existe == false)
+                    {
+
+                        dgvCamposCreacion.Rows.Add(cmbCampoCreacion.Text, txtAliasCreacion.Text);
+                        funcLlenarCmb();
                     }
                 }
             }
 
+        }
+
+        private void chkTodosCamp_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTodosCamp.Checked == true) {
+                txtAliasCreacion.Enabled = false;
+                cmbCampoCreacion.Enabled = false;
+                txtAliasCreacion.Text = "";
+                cmbCampoCreacion.Text = "";
+            }
+            else
+            {
+                txtAliasCreacion.Enabled = true;
+                cmbCampoCreacion.Enabled = true;
+            }
+        }
+
+        private void btnQuitarCampoCreacion_Click(object sender, EventArgs e)
+        {
+            if (dgvCamposCreacion.SelectedRows.Count > 0)
+            {
+                dgvCamposCreacion.Rows.Remove(dgvCamposCreacion.CurrentRow);
+                funcLlenarCmb();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
