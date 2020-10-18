@@ -13,7 +13,10 @@ namespace CapaVista.Usuario_Avanzado
 {
     public partial class frmUsuarioAvanzado : Form
     {
-        
+
+        string tabla = "";
+        string s1 = "", s2 = "", s3 = "";
+        string sentencia = "";
 
         public frmUsuarioAvanzado()
         {
@@ -29,12 +32,11 @@ namespace CapaVista.Usuario_Avanzado
             cmbTablasCreacion.DisplayMember = Datos.Columns[0].ToString();
             cmbTablasCreacion.DataSource = Datos;
             cmbTablasCreacion.ResetText();
-            dgvTablasCreacion.Enabled = false;
         }
 
         private void funcCampos()
         {
-            string tabla = cmbTablasCreacion.Text;
+            tabla = cmbTablasCreacion.Text;
             DataTable Campos = Cont.funcItemsCampos(tabla);
             cmbCampoCreacion.DisplayMember = Campos.Columns[3].ToString();
             cmbCampoCreacion.DataSource = Campos;
@@ -163,9 +165,179 @@ namespace CapaVista.Usuario_Avanzado
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnGuardarCreacion_Click(object sender, EventArgs e)
         {
+            s1 = funcSentencia1(s1);
+            s3 = funcSentencia3(s3);
+            if (s3 == "")
+            {
+                s3 = ";";
+            }
+            sentencia = s1 + s2 + s3;
+            MessageBox.Show(sentencia);
+            txtConsultaCreacion.Text = sentencia;
+        }
+
+        
+
+        private void btnAgregarCondiCreacion_Click(object sender, EventArgs e)
+        {
+            s2 = funcSentencia2(s2);
+            if (gbxLogicaCreacion.Enabled == false)
+            {
+                gbxLogicaCreacion.Enabled = true;
+            }
+        }
+
+        private string funcSentencia1(string s1)
+        {
+            string campos = "";
+            for (int i = 0; i < dgvCamposCreacion.RowCount; i++)
+            {
+
+                if (i == dgvCamposCreacion.RowCount - 1)
+                {
+                    campos += Convert.ToString(dgvCamposCreacion.Rows[i].Cells["clmCampo"].Value);
+                }
+                else
+                {
+                    campos += Convert.ToString(dgvCamposCreacion.Rows[i].Cells["clmCampo"].Value) + ", ";
+                }
+
+            }
+            s1 = "SELECT " + campos + " FROM " + tabla;
+            return s1;
+        }
+
+        private string funcSentencia2(string s2)
+        {
+            string campocomp = "";
+            string comparador = "";
+            string valorcomp = "";
+
+            if (gbxLogicaCreacion.Enabled == false)
+            {
+                campocomp = funcCampocomp(campocomp);
+                comparador = funcComparador(comparador);
+                valorcomp = funcValorcomp(valorcomp);
+                s2 = " WHERE " + campocomp + " " + comparador + " " + valorcomp;
+            }
+            else
+            {
+                campocomp = funcCampocomp(campocomp);
+                comparador = funcComparador(comparador);
+                valorcomp = funcValorcomp(valorcomp);
+                if (chkAndCreacion.Checked == true)
+                {
+                    if (chkOrCreacion.Checked == true)
+                    {
+                        MessageBox.Show("No se pueden seleccionar ambos comparadores logicos al mismo tiempo.");
+                    }
+                    else
+                    {
+                        s2 = s2 + " AND " + campocomp + " " + comparador + " " + valorcomp;
+                    }
+                }
+                else if (chkOrCreacion.Checked == true)
+                {
+                    if (chkAndCreacion.Checked == true)
+                    {
+                        MessageBox.Show("No se pueden seleccionar ambos comparadores logicos al mismo tiempo.");
+
+                    }
+                    else
+                    {
+                        s2 = s2 + " OR " + campocomp + " " + comparador + " " + valorcomp;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un comparador logico.");
+                }
+            }
+            return s2;
+        }
+        private string funcSentencia3(string s3)
+        {
+            string campoorden = cmbCampoAgruparCreacion.Text;
+            string orden = "";
+
+            if (chkASCCreacion.Checked == true)
+            {
+                if (chkDescCreacion.Checked == true)
+                {
+                    MessageBox.Show("Solo se puede utilizar un orden para la consulta.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    orden = "ASC";
+                }
+            }
+            if (chkDescCreacion.Checked == true)
+            {
+                if (chkASCCreacion.Checked == true)
+                {
+                    MessageBox.Show("Solo se puede utilizar un orden para la consulta.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    orden = "DESC";
+                }
+            }
             
+
+            s3 = " ORDER BY " + campoorden + " " + orden + " ;"; 
+            return s3;
+        }
+
+        private string funcComparador(string comparador)
+        {
+            if (rbtnMayorCreacion.Checked == true)
+            {
+                comparador = ">";
+            }
+            else if (rbtnIgualCreacion.Checked == true)
+            {
+                comparador = "=";
+            }
+            else if (rbtnMenorCreacion.Checked == true)
+            {
+                comparador = "<";
+            }
+            else
+            {
+                MessageBox.Show("Selecciones un comparador." ,"", MessageBoxButtons.OK , MessageBoxIcon.Error);
+            }
+
+            return comparador;
+        }
+
+        private string funcCampocomp(string campocomp)
+        {
+            if (cmbCampoComparacionCreacion.Text == "")
+            {
+                MessageBox.Show("Seleccione un campo para la comparación.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                campocomp = cmbCampoComparacionCreacion.Text;
+            }
+
+            return campocomp;
+        }
+
+        private string funcValorcomp(string valorcomp)
+        {
+            if (txtValorCreacion.Text == "")
+            {
+                MessageBox.Show("Ingresar un valor para la comparación.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                valorcomp = txtValorCreacion.Text;
+            }
+
+            return valorcomp;
         }
     }
 }

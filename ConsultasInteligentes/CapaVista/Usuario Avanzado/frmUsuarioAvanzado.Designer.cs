@@ -30,29 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarioAvanzado));
             this.tbpMantenimientoConsulta = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.btnBuscarConsultaEditar = new System.Windows.Forms.Button();
+            this.txtConsultaEditar = new System.Windows.Forms.TextBox();
+            this.lblConsultaEditar = new System.Windows.Forms.Label();
+            this.gbxCondicionalesEditar = new System.Windows.Forms.GroupBox();
+            this.btnAgregarCondiEditar = new System.Windows.Forms.Button();
+            this.btnQuitarCondiEditar = new System.Windows.Forms.Button();
+            this.gbxLogicaEditar = new System.Windows.Forms.GroupBox();
+            this.gbxComparacionEditar = new System.Windows.Forms.GroupBox();
+            this.cmbCampoComparacionEditar = new System.Windows.Forms.ComboBox();
+            this.lblCampoComparacionEditar = new System.Windows.Forms.Label();
+            this.txtValorComparacionEditar = new System.Windows.Forms.TextBox();
+            this.lblValorComparacionEditar = new System.Windows.Forms.Label();
+            this.rbtnIgualEditar = new System.Windows.Forms.RadioButton();
+            this.rbtnMayorEditar = new System.Windows.Forms.RadioButton();
+            this.rbtnMenorEditar = new System.Windows.Forms.RadioButton();
+            this.gbxAgruparEditar = new System.Windows.Forms.GroupBox();
+            this.cmbAgruparConsultaEditar = new System.Windows.Forms.ComboBox();
+            this.lblCampoAgruparCreacion = new System.Windows.Forms.Label();
+            this.gbxOrdenConsultaEditar = new System.Windows.Forms.GroupBox();
             this.btnCancelarEditar = new System.Windows.Forms.Button();
             this.btnGuardarEditar = new System.Windows.Forms.Button();
             this.dgvCampoEditar = new System.Windows.Forms.DataGridView();
@@ -75,17 +71,17 @@
             this.btnQuitarTablaEditar = new System.Windows.Forms.Button();
             this.lblTablaEditar = new System.Windows.Forms.Label();
             this.tbpCreacionConsulta = new System.Windows.Forms.TabPage();
+            this.dgvTablasCreacion = new System.Windows.Forms.DataGridView();
+            this.clmTabla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCamposCreacion = new System.Windows.Forms.DataGridView();
             this.clmCampo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmAlias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtConsultaCreacion = new System.Windows.Forms.TextBox();
+            this.lblConsultaCreacion = new System.Windows.Forms.Label();
             this.gbxCondiciones = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btnAgregarCondiCreacion = new System.Windows.Forms.Button();
+            this.btnQuitarCondiCreacion = new System.Windows.Forms.Button();
+            this.gbxLogicaCreacion = new System.Windows.Forms.GroupBox();
             this.gbxComparacionCreacion = new System.Windows.Forms.GroupBox();
             this.cmbCampoComparacionCreacion = new System.Windows.Forms.ComboBox();
             this.lblComparacionCampoCreacion = new System.Windows.Forms.Label();
@@ -102,8 +98,6 @@
             this.txtNombreCreacion = new System.Windows.Forms.TextBox();
             this.lblNombreCreacion = new System.Windows.Forms.Label();
             this.gbxOrdenCreacion = new System.Windows.Forms.GroupBox();
-            this.rbtnMenorMayorCreacion = new System.Windows.Forms.RadioButton();
-            this.rbtnASCCreacion = new System.Windows.Forms.RadioButton();
             this.gbxCamposCreacion = new System.Windows.Forms.GroupBox();
             this.chkTodosCamp = new System.Windows.Forms.CheckBox();
             this.txtAliasCreacion = new System.Windows.Forms.TextBox();
@@ -118,39 +112,45 @@
             this.btnQuitarTablaCreacion = new System.Windows.Forms.Button();
             this.lblTablaCreacion = new System.Windows.Forms.Label();
             this.tbcConsultaNormal = new System.Windows.Forms.TabControl();
-            this.dgvTablasCreacion = new System.Windows.Forms.DataGridView();
-            this.clmTabla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chkASCCreacion = new System.Windows.Forms.CheckBox();
+            this.chkDescCreacion = new System.Windows.Forms.CheckBox();
+            this.chkAndCreacion = new System.Windows.Forms.CheckBox();
+            this.chkOrCreacion = new System.Windows.Forms.CheckBox();
+            this.chkAscEditar = new System.Windows.Forms.CheckBox();
+            this.chkDescEditar = new System.Windows.Forms.CheckBox();
+            this.chkAndEditar = new System.Windows.Forms.CheckBox();
+            this.chkOrEditar = new System.Windows.Forms.CheckBox();
             this.tbpMantenimientoConsulta.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbxCondicionalesEditar.SuspendLayout();
+            this.gbxLogicaEditar.SuspendLayout();
+            this.gbxComparacionEditar.SuspendLayout();
+            this.gbxAgruparEditar.SuspendLayout();
+            this.gbxOrdenConsultaEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampoEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaEditar)).BeginInit();
             this.gbxCamposEditar.SuspendLayout();
             this.gbxConsultaEditar.SuspendLayout();
             this.tbpCreacionConsulta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablasCreacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCamposCreacion)).BeginInit();
             this.gbxCondiciones.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbxLogicaCreacion.SuspendLayout();
             this.gbxComparacionCreacion.SuspendLayout();
             this.gbxAgruparCreacion.SuspendLayout();
             this.gbxOrdenCreacion.SuspendLayout();
             this.gbxCamposCreacion.SuspendLayout();
             this.gbxTablasCreacion.SuspendLayout();
             this.tbcConsultaNormal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTablasCreacion)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpMantenimientoConsulta
             // 
-            this.tbpMantenimientoConsulta.Controls.Add(this.button5);
-            this.tbpMantenimientoConsulta.Controls.Add(this.textBox2);
-            this.tbpMantenimientoConsulta.Controls.Add(this.label3);
-            this.tbpMantenimientoConsulta.Controls.Add(this.groupBox4);
-            this.tbpMantenimientoConsulta.Controls.Add(this.groupBox2);
-            this.tbpMantenimientoConsulta.Controls.Add(this.groupBox3);
+            this.tbpMantenimientoConsulta.Controls.Add(this.btnBuscarConsultaEditar);
+            this.tbpMantenimientoConsulta.Controls.Add(this.txtConsultaEditar);
+            this.tbpMantenimientoConsulta.Controls.Add(this.lblConsultaEditar);
+            this.tbpMantenimientoConsulta.Controls.Add(this.gbxCondicionalesEditar);
+            this.tbpMantenimientoConsulta.Controls.Add(this.gbxAgruparEditar);
+            this.tbpMantenimientoConsulta.Controls.Add(this.gbxOrdenConsultaEditar);
             this.tbpMantenimientoConsulta.Controls.Add(this.btnCancelarEditar);
             this.tbpMantenimientoConsulta.Controls.Add(this.btnGuardarEditar);
             this.tbpMantenimientoConsulta.Controls.Add(this.dgvCampoEditar);
@@ -159,259 +159,241 @@
             this.tbpMantenimientoConsulta.Controls.Add(this.dgvTablaEditar);
             this.tbpMantenimientoConsulta.Controls.Add(this.gbxCamposEditar);
             this.tbpMantenimientoConsulta.Controls.Add(this.gbxConsultaEditar);
-            this.tbpMantenimientoConsulta.Location = new System.Drawing.Point(4, 22);
+            this.tbpMantenimientoConsulta.Location = new System.Drawing.Point(4, 25);
+            this.tbpMantenimientoConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbpMantenimientoConsulta.Name = "tbpMantenimientoConsulta";
-            this.tbpMantenimientoConsulta.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpMantenimientoConsulta.Size = new System.Drawing.Size(792, 485);
+            this.tbpMantenimientoConsulta.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpMantenimientoConsulta.Size = new System.Drawing.Size(1059, 600);
             this.tbpMantenimientoConsulta.TabIndex = 2;
             this.tbpMantenimientoConsulta.Text = "Editar Consulta";
             this.tbpMantenimientoConsulta.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnBuscarConsultaEditar
             // 
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(721, 9);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(48, 33);
-            this.button5.TabIndex = 27;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnBuscarConsultaEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarConsultaEditar.Image")));
+            this.btnBuscarConsultaEditar.Location = new System.Drawing.Point(961, 11);
+            this.btnBuscarConsultaEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarConsultaEditar.Name = "btnBuscarConsultaEditar";
+            this.btnBuscarConsultaEditar.Size = new System.Drawing.Size(64, 41);
+            this.btnBuscarConsultaEditar.TabIndex = 27;
+            this.btnBuscarConsultaEditar.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtConsultaEditar
             // 
-            this.textBox2.Location = new System.Drawing.Point(404, 401);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(358, 20);
-            this.textBox2.TabIndex = 26;
+            this.txtConsultaEditar.Location = new System.Drawing.Point(539, 494);
+            this.txtConsultaEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultaEditar.Name = "txtConsultaEditar";
+            this.txtConsultaEditar.Size = new System.Drawing.Size(476, 22);
+            this.txtConsultaEditar.TabIndex = 26;
             // 
-            // label3
+            // lblConsultaEditar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(314, 404);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "La Consulta";
+            this.lblConsultaEditar.AutoSize = true;
+            this.lblConsultaEditar.Location = new System.Drawing.Point(419, 497);
+            this.lblConsultaEditar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblConsultaEditar.Name = "lblConsultaEditar";
+            this.lblConsultaEditar.Size = new System.Drawing.Size(83, 17);
+            this.lblConsultaEditar.TabIndex = 25;
+            this.lblConsultaEditar.Text = "La Consulta";
             // 
-            // groupBox4
+            // gbxCondicionalesEditar
             // 
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.groupBox5);
-            this.groupBox4.Controls.Add(this.groupBox6);
-            this.groupBox4.Location = new System.Drawing.Point(317, 196);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(445, 194);
-            this.groupBox4.TabIndex = 24;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Condicionales de la Consulta";
+            this.gbxCondicionalesEditar.Controls.Add(this.btnAgregarCondiEditar);
+            this.gbxCondicionalesEditar.Controls.Add(this.btnQuitarCondiEditar);
+            this.gbxCondicionalesEditar.Controls.Add(this.gbxLogicaEditar);
+            this.gbxCondicionalesEditar.Controls.Add(this.gbxComparacionEditar);
+            this.gbxCondicionalesEditar.Location = new System.Drawing.Point(423, 241);
+            this.gbxCondicionalesEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxCondicionalesEditar.Name = "gbxCondicionalesEditar";
+            this.gbxCondicionalesEditar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxCondicionalesEditar.Size = new System.Drawing.Size(593, 239);
+            this.gbxCondicionalesEditar.TabIndex = 24;
+            this.gbxCondicionalesEditar.TabStop = false;
+            this.gbxCondicionalesEditar.Text = "Condicionales de la Consulta";
             // 
-            // button3
+            // btnAgregarCondiEditar
             // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(128, 149);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 36);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Agregar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgregarCondiEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarCondiEditar.Image")));
+            this.btnAgregarCondiEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarCondiEditar.Location = new System.Drawing.Point(171, 183);
+            this.btnAgregarCondiEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarCondiEditar.Name = "btnAgregarCondiEditar";
+            this.btnAgregarCondiEditar.Size = new System.Drawing.Size(113, 44);
+            this.btnAgregarCondiEditar.TabIndex = 13;
+            this.btnAgregarCondiEditar.Text = "Agregar";
+            this.btnAgregarCondiEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarCondiEditar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnQuitarCondiEditar
             // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(231, 149);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 36);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Quitar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnQuitarCondiEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitarCondiEditar.Image")));
+            this.btnQuitarCondiEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnQuitarCondiEditar.Location = new System.Drawing.Point(308, 183);
+            this.btnQuitarCondiEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuitarCondiEditar.Name = "btnQuitarCondiEditar";
+            this.btnQuitarCondiEditar.Size = new System.Drawing.Size(96, 44);
+            this.btnQuitarCondiEditar.TabIndex = 12;
+            this.btnQuitarCondiEditar.Text = "Quitar";
+            this.btnQuitarCondiEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuitarCondiEditar.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // gbxLogicaEditar
             // 
-            this.groupBox5.Controls.Add(this.radioButton5);
-            this.groupBox5.Controls.Add(this.radioButton6);
-            this.groupBox5.Location = new System.Drawing.Point(285, 28);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(143, 115);
-            this.groupBox5.TabIndex = 11;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Lógica de la Consulta";
+            this.gbxLogicaEditar.Controls.Add(this.chkOrEditar);
+            this.gbxLogicaEditar.Controls.Add(this.chkAndEditar);
+            this.gbxLogicaEditar.Location = new System.Drawing.Point(380, 34);
+            this.gbxLogicaEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxLogicaEditar.Name = "gbxLogicaEditar";
+            this.gbxLogicaEditar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxLogicaEditar.Size = new System.Drawing.Size(191, 142);
+            this.gbxLogicaEditar.TabIndex = 11;
+            this.gbxLogicaEditar.TabStop = false;
+            this.gbxLogicaEditar.Text = "Lógica de la Consulta";
             // 
-            // radioButton5
+            // gbxComparacionEditar
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(51, 63);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(41, 17);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "OR";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.gbxComparacionEditar.Controls.Add(this.cmbCampoComparacionEditar);
+            this.gbxComparacionEditar.Controls.Add(this.lblCampoComparacionEditar);
+            this.gbxComparacionEditar.Controls.Add(this.txtValorComparacionEditar);
+            this.gbxComparacionEditar.Controls.Add(this.lblValorComparacionEditar);
+            this.gbxComparacionEditar.Controls.Add(this.rbtnIgualEditar);
+            this.gbxComparacionEditar.Controls.Add(this.rbtnMayorEditar);
+            this.gbxComparacionEditar.Controls.Add(this.rbtnMenorEditar);
+            this.gbxComparacionEditar.Location = new System.Drawing.Point(21, 34);
+            this.gbxComparacionEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxComparacionEditar.Name = "gbxComparacionEditar";
+            this.gbxComparacionEditar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxComparacionEditar.Size = new System.Drawing.Size(337, 142);
+            this.gbxComparacionEditar.TabIndex = 2;
+            this.gbxComparacionEditar.TabStop = false;
+            this.gbxComparacionEditar.Text = "Comparación en la consulta";
             // 
-            // radioButton6
+            // cmbCampoComparacionEditar
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(51, 40);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(48, 17);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "AND";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.cmbCampoComparacionEditar.FormattingEnabled = true;
+            this.cmbCampoComparacionEditar.Location = new System.Drawing.Point(89, 30);
+            this.cmbCampoComparacionEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCampoComparacionEditar.Name = "cmbCampoComparacionEditar";
+            this.cmbCampoComparacionEditar.Size = new System.Drawing.Size(217, 24);
+            this.cmbCampoComparacionEditar.TabIndex = 8;
             // 
-            // groupBox6
+            // lblCampoComparacionEditar
             // 
-            this.groupBox6.Controls.Add(this.comboBox2);
-            this.groupBox6.Controls.Add(this.label4);
-            this.groupBox6.Controls.Add(this.textBox3);
-            this.groupBox6.Controls.Add(this.label5);
-            this.groupBox6.Controls.Add(this.radioButton7);
-            this.groupBox6.Controls.Add(this.radioButton8);
-            this.groupBox6.Controls.Add(this.radioButton9);
-            this.groupBox6.Location = new System.Drawing.Point(16, 28);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(253, 115);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Comparación en la consulta";
+            this.lblCampoComparacionEditar.AutoSize = true;
+            this.lblCampoComparacionEditar.Location = new System.Drawing.Point(21, 33);
+            this.lblCampoComparacionEditar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCampoComparacionEditar.Name = "lblCampoComparacionEditar";
+            this.lblCampoComparacionEditar.Size = new System.Drawing.Size(52, 17);
+            this.lblCampoComparacionEditar.TabIndex = 8;
+            this.lblCampoComparacionEditar.Text = "Campo";
             // 
-            // comboBox2
+            // txtValorComparacionEditar
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(67, 24);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(164, 21);
-            this.comboBox2.TabIndex = 8;
+            this.txtValorComparacionEditar.Location = new System.Drawing.Point(89, 70);
+            this.txtValorComparacionEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtValorComparacionEditar.Name = "txtValorComparacionEditar";
+            this.txtValorComparacionEditar.Size = new System.Drawing.Size(217, 22);
+            this.txtValorComparacionEditar.TabIndex = 7;
             // 
-            // label4
+            // lblValorComparacionEditar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Campo";
+            this.lblValorComparacionEditar.AutoSize = true;
+            this.lblValorComparacionEditar.Location = new System.Drawing.Point(23, 74);
+            this.lblValorComparacionEditar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValorComparacionEditar.Name = "lblValorComparacionEditar";
+            this.lblValorComparacionEditar.Size = new System.Drawing.Size(41, 17);
+            this.lblValorComparacionEditar.TabIndex = 7;
+            this.lblValorComparacionEditar.Text = "Valor";
             // 
-            // textBox3
+            // rbtnIgualEditar
             // 
-            this.textBox3.Location = new System.Drawing.Point(67, 57);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 20);
-            this.textBox3.TabIndex = 7;
+            this.rbtnIgualEditar.AutoSize = true;
+            this.rbtnIgualEditar.Location = new System.Drawing.Point(145, 113);
+            this.rbtnIgualEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnIgualEditar.Name = "rbtnIgualEditar";
+            this.rbtnIgualEditar.Size = new System.Drawing.Size(37, 21);
+            this.rbtnIgualEditar.TabIndex = 2;
+            this.rbtnIgualEditar.TabStop = true;
+            this.rbtnIgualEditar.Text = "=";
+            this.rbtnIgualEditar.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // rbtnMayorEditar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Valor";
+            this.rbtnMayorEditar.AutoSize = true;
+            this.rbtnMayorEditar.Location = new System.Drawing.Point(95, 113);
+            this.rbtnMayorEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnMayorEditar.Name = "rbtnMayorEditar";
+            this.rbtnMayorEditar.Size = new System.Drawing.Size(37, 21);
+            this.rbtnMayorEditar.TabIndex = 1;
+            this.rbtnMayorEditar.TabStop = true;
+            this.rbtnMayorEditar.Text = ">";
+            this.rbtnMayorEditar.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // rbtnMenorEditar
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(109, 92);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(31, 17);
-            this.radioButton7.TabIndex = 2;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "=";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbtnMenorEditar.AutoSize = true;
+            this.rbtnMenorEditar.Location = new System.Drawing.Point(196, 113);
+            this.rbtnMenorEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnMenorEditar.Name = "rbtnMenorEditar";
+            this.rbtnMenorEditar.Size = new System.Drawing.Size(37, 21);
+            this.rbtnMenorEditar.TabIndex = 0;
+            this.rbtnMenorEditar.TabStop = true;
+            this.rbtnMenorEditar.Text = "<";
+            this.rbtnMenorEditar.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // gbxAgruparEditar
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(71, 92);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(31, 17);
-            this.radioButton8.TabIndex = 1;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = ">";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.gbxAgruparEditar.Controls.Add(this.cmbAgruparConsultaEditar);
+            this.gbxAgruparEditar.Controls.Add(this.lblCampoAgruparCreacion);
+            this.gbxAgruparEditar.Location = new System.Drawing.Point(33, 366);
+            this.gbxAgruparEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxAgruparEditar.Name = "gbxAgruparEditar";
+            this.gbxAgruparEditar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxAgruparEditar.Size = new System.Drawing.Size(337, 86);
+            this.gbxAgruparEditar.TabIndex = 23;
+            this.gbxAgruparEditar.TabStop = false;
+            this.gbxAgruparEditar.Text = "Agrupar la Consulta";
             // 
-            // radioButton9
+            // cmbAgruparConsultaEditar
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(147, 92);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(31, 17);
-            this.radioButton9.TabIndex = 0;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "<";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.cmbAgruparConsultaEditar.FormattingEnabled = true;
+            this.cmbAgruparConsultaEditar.Location = new System.Drawing.Point(89, 38);
+            this.cmbAgruparConsultaEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbAgruparConsultaEditar.Name = "cmbAgruparConsultaEditar";
+            this.cmbAgruparConsultaEditar.Size = new System.Drawing.Size(217, 24);
+            this.cmbAgruparConsultaEditar.TabIndex = 9;
             // 
-            // groupBox2
+            // lblCampoAgruparCreacion
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(25, 297);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(253, 70);
-            this.groupBox2.TabIndex = 23;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Agrupar la Consulta";
+            this.lblCampoAgruparCreacion.AutoSize = true;
+            this.lblCampoAgruparCreacion.Location = new System.Drawing.Point(19, 42);
+            this.lblCampoAgruparCreacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCampoAgruparCreacion.Name = "lblCampoAgruparCreacion";
+            this.lblCampoAgruparCreacion.Size = new System.Drawing.Size(52, 17);
+            this.lblCampoAgruparCreacion.TabIndex = 10;
+            this.lblCampoAgruparCreacion.Text = "Campo";
             // 
-            // comboBox1
+            // gbxOrdenConsultaEditar
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(67, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 21);
-            this.comboBox1.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Campo";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.radioButton3);
-            this.groupBox3.Controls.Add(this.radioButton4);
-            this.groupBox3.Location = new System.Drawing.Point(92, 373);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(128, 88);
-            this.groupBox3.TabIndex = 22;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Orden de la Consulta";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(36, 52);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(54, 17);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "DESC";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(36, 29);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(46, 17);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "ASC";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.gbxOrdenConsultaEditar.Controls.Add(this.chkDescEditar);
+            this.gbxOrdenConsultaEditar.Controls.Add(this.chkAscEditar);
+            this.gbxOrdenConsultaEditar.Location = new System.Drawing.Point(123, 459);
+            this.gbxOrdenConsultaEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxOrdenConsultaEditar.Name = "gbxOrdenConsultaEditar";
+            this.gbxOrdenConsultaEditar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxOrdenConsultaEditar.Size = new System.Drawing.Size(171, 108);
+            this.gbxOrdenConsultaEditar.TabIndex = 22;
+            this.gbxOrdenConsultaEditar.TabStop = false;
+            this.gbxOrdenConsultaEditar.Text = "Orden de la Consulta";
             // 
             // btnCancelarEditar
             // 
             this.btnCancelarEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarEditar.Image")));
             this.btnCancelarEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelarEditar.Location = new System.Drawing.Point(535, 441);
+            this.btnCancelarEditar.Location = new System.Drawing.Point(713, 543);
+            this.btnCancelarEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelarEditar.Name = "btnCancelarEditar";
-            this.btnCancelarEditar.Size = new System.Drawing.Size(90, 36);
+            this.btnCancelarEditar.Size = new System.Drawing.Size(120, 44);
             this.btnCancelarEditar.TabIndex = 21;
             this.btnCancelarEditar.Text = "Cancelar";
             this.btnCancelarEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -421,9 +403,10 @@
             // 
             this.btnGuardarEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarEditar.Image")));
             this.btnGuardarEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarEditar.Location = new System.Drawing.Point(435, 441);
+            this.btnGuardarEditar.Location = new System.Drawing.Point(580, 543);
+            this.btnGuardarEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardarEditar.Name = "btnGuardarEditar";
-            this.btnGuardarEditar.Size = new System.Drawing.Size(85, 36);
+            this.btnGuardarEditar.Size = new System.Drawing.Size(113, 44);
             this.btnGuardarEditar.TabIndex = 20;
             this.btnGuardarEditar.Text = "Guardar";
             this.btnGuardarEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -434,10 +417,11 @@
             this.dgvCampoEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCampoEditar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            this.dgvCampoEditar.Location = new System.Drawing.Point(535, 56);
+            this.dgvCampoEditar.Location = new System.Drawing.Point(713, 69);
+            this.dgvCampoEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCampoEditar.Name = "dgvCampoEditar";
             this.dgvCampoEditar.RowHeadersWidth = 51;
-            this.dgvCampoEditar.Size = new System.Drawing.Size(227, 134);
+            this.dgvCampoEditar.Size = new System.Drawing.Size(303, 165);
             this.dgvCampoEditar.TabIndex = 19;
             // 
             // dataGridViewTextBoxColumn1
@@ -451,17 +435,19 @@
             // 
             // txtNombreEditar
             // 
-            this.txtNombreEditar.Location = new System.Drawing.Point(454, 16);
+            this.txtNombreEditar.Location = new System.Drawing.Point(605, 20);
+            this.txtNombreEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreEditar.Name = "txtNombreEditar";
-            this.txtNombreEditar.Size = new System.Drawing.Size(261, 20);
+            this.txtNombreEditar.Size = new System.Drawing.Size(347, 22);
             this.txtNombreEditar.TabIndex = 17;
             // 
             // lblNombreEditar
             // 
             this.lblNombreEditar.AutoSize = true;
-            this.lblNombreEditar.Location = new System.Drawing.Point(314, 19);
+            this.lblNombreEditar.Location = new System.Drawing.Point(419, 23);
+            this.lblNombreEditar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreEditar.Name = "lblNombreEditar";
-            this.lblNombreEditar.Size = new System.Drawing.Size(114, 13);
+            this.lblNombreEditar.Size = new System.Drawing.Size(152, 17);
             this.lblNombreEditar.TabIndex = 16;
             this.lblNombreEditar.Text = "Nombre de la Consulta";
             // 
@@ -470,10 +456,11 @@
             this.dgvTablaEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTablaEditar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
-            this.dgvTablaEditar.Location = new System.Drawing.Point(317, 56);
+            this.dgvTablaEditar.Location = new System.Drawing.Point(423, 69);
+            this.dgvTablaEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTablaEditar.Name = "dgvTablaEditar";
             this.dgvTablaEditar.RowHeadersWidth = 51;
-            this.dgvTablaEditar.Size = new System.Drawing.Size(191, 134);
+            this.dgvTablaEditar.Size = new System.Drawing.Size(255, 165);
             this.dgvTablaEditar.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn2
@@ -494,26 +481,30 @@
             this.gbxCamposEditar.Controls.Add(this.btnQuitarCampoEditar);
             this.gbxCamposEditar.Controls.Add(this.cmbCampoEditar);
             this.gbxCamposEditar.Controls.Add(this.lblCampoEditar);
-            this.gbxCamposEditar.Location = new System.Drawing.Point(25, 133);
+            this.gbxCamposEditar.Location = new System.Drawing.Point(33, 164);
+            this.gbxCamposEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxCamposEditar.Name = "gbxCamposEditar";
-            this.gbxCamposEditar.Size = new System.Drawing.Size(253, 158);
+            this.gbxCamposEditar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxCamposEditar.Size = new System.Drawing.Size(337, 194);
             this.gbxCamposEditar.TabIndex = 12;
             this.gbxCamposEditar.TabStop = false;
             this.gbxCamposEditar.Text = "Campos de la Consulta";
             // 
             // txtAliasEditar
             // 
-            this.txtAliasEditar.Location = new System.Drawing.Point(67, 57);
+            this.txtAliasEditar.Location = new System.Drawing.Point(89, 70);
+            this.txtAliasEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAliasEditar.Name = "txtAliasEditar";
-            this.txtAliasEditar.Size = new System.Drawing.Size(164, 20);
+            this.txtAliasEditar.Size = new System.Drawing.Size(217, 22);
             this.txtAliasEditar.TabIndex = 8;
             // 
             // lblAliasEditar
             // 
             this.lblAliasEditar.AutoSize = true;
-            this.lblAliasEditar.Location = new System.Drawing.Point(17, 60);
+            this.lblAliasEditar.Location = new System.Drawing.Point(23, 74);
+            this.lblAliasEditar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAliasEditar.Name = "lblAliasEditar";
-            this.lblAliasEditar.Size = new System.Drawing.Size(29, 13);
+            this.lblAliasEditar.Size = new System.Drawing.Size(38, 17);
             this.lblAliasEditar.TabIndex = 9;
             this.lblAliasEditar.Text = "Alias";
             // 
@@ -521,9 +512,10 @@
             // 
             this.btnAgregarCampoEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarCampoEditar.Image")));
             this.btnAgregarCampoEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarCampoEditar.Location = new System.Drawing.Point(35, 111);
+            this.btnAgregarCampoEditar.Location = new System.Drawing.Point(47, 137);
+            this.btnAgregarCampoEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregarCampoEditar.Name = "btnAgregarCampoEditar";
-            this.btnAgregarCampoEditar.Size = new System.Drawing.Size(85, 36);
+            this.btnAgregarCampoEditar.Size = new System.Drawing.Size(113, 44);
             this.btnAgregarCampoEditar.TabIndex = 7;
             this.btnAgregarCampoEditar.Text = "Agregar";
             this.btnAgregarCampoEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -532,9 +524,10 @@
             // rbtnCamposEditar
             // 
             this.rbtnCamposEditar.AutoSize = true;
-            this.rbtnCamposEditar.Location = new System.Drawing.Point(93, 83);
+            this.rbtnCamposEditar.Location = new System.Drawing.Point(124, 102);
+            this.rbtnCamposEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnCamposEditar.Name = "rbtnCamposEditar";
-            this.rbtnCamposEditar.Size = new System.Drawing.Size(112, 17);
+            this.rbtnCamposEditar.Size = new System.Drawing.Size(146, 21);
             this.rbtnCamposEditar.TabIndex = 8;
             this.rbtnCamposEditar.TabStop = true;
             this.rbtnCamposEditar.Text = "Todos los Campos";
@@ -544,9 +537,10 @@
             // 
             this.btnQuitarCampoEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitarCampoEditar.Image")));
             this.btnQuitarCampoEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnQuitarCampoEditar.Location = new System.Drawing.Point(138, 111);
+            this.btnQuitarCampoEditar.Location = new System.Drawing.Point(184, 137);
+            this.btnQuitarCampoEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQuitarCampoEditar.Name = "btnQuitarCampoEditar";
-            this.btnQuitarCampoEditar.Size = new System.Drawing.Size(72, 36);
+            this.btnQuitarCampoEditar.Size = new System.Drawing.Size(96, 44);
             this.btnQuitarCampoEditar.TabIndex = 6;
             this.btnQuitarCampoEditar.Text = "Quitar";
             this.btnQuitarCampoEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -555,17 +549,19 @@
             // cmbCampoEditar
             // 
             this.cmbCampoEditar.FormattingEnabled = true;
-            this.cmbCampoEditar.Location = new System.Drawing.Point(67, 30);
+            this.cmbCampoEditar.Location = new System.Drawing.Point(89, 37);
+            this.cmbCampoEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCampoEditar.Name = "cmbCampoEditar";
-            this.cmbCampoEditar.Size = new System.Drawing.Size(164, 21);
+            this.cmbCampoEditar.Size = new System.Drawing.Size(217, 24);
             this.cmbCampoEditar.TabIndex = 7;
             // 
             // lblCampoEditar
             // 
             this.lblCampoEditar.AutoSize = true;
-            this.lblCampoEditar.Location = new System.Drawing.Point(16, 33);
+            this.lblCampoEditar.Location = new System.Drawing.Point(21, 41);
+            this.lblCampoEditar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCampoEditar.Name = "lblCampoEditar";
-            this.lblCampoEditar.Size = new System.Drawing.Size(40, 13);
+            this.lblCampoEditar.Size = new System.Drawing.Size(52, 17);
             this.lblCampoEditar.TabIndex = 6;
             this.lblCampoEditar.Text = "Campo";
             // 
@@ -575,9 +571,11 @@
             this.gbxConsultaEditar.Controls.Add(this.cmbTablaEditar);
             this.gbxConsultaEditar.Controls.Add(this.btnQuitarTablaEditar);
             this.gbxConsultaEditar.Controls.Add(this.lblTablaEditar);
-            this.gbxConsultaEditar.Location = new System.Drawing.Point(25, 16);
+            this.gbxConsultaEditar.Location = new System.Drawing.Point(33, 20);
+            this.gbxConsultaEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxConsultaEditar.Name = "gbxConsultaEditar";
-            this.gbxConsultaEditar.Size = new System.Drawing.Size(253, 111);
+            this.gbxConsultaEditar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxConsultaEditar.Size = new System.Drawing.Size(337, 137);
             this.gbxConsultaEditar.TabIndex = 11;
             this.gbxConsultaEditar.TabStop = false;
             this.gbxConsultaEditar.Text = "Tablas de la Consulta";
@@ -586,9 +584,10 @@
             // 
             this.btnAgregarTablaEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarTablaEditar.Image")));
             this.btnAgregarTablaEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarTablaEditar.Location = new System.Drawing.Point(35, 64);
+            this.btnAgregarTablaEditar.Location = new System.Drawing.Point(47, 79);
+            this.btnAgregarTablaEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregarTablaEditar.Name = "btnAgregarTablaEditar";
-            this.btnAgregarTablaEditar.Size = new System.Drawing.Size(85, 36);
+            this.btnAgregarTablaEditar.Size = new System.Drawing.Size(113, 44);
             this.btnAgregarTablaEditar.TabIndex = 5;
             this.btnAgregarTablaEditar.Text = "Agregar";
             this.btnAgregarTablaEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -597,18 +596,20 @@
             // cmbTablaEditar
             // 
             this.cmbTablaEditar.FormattingEnabled = true;
-            this.cmbTablaEditar.Location = new System.Drawing.Point(67, 28);
+            this.cmbTablaEditar.Location = new System.Drawing.Point(89, 34);
+            this.cmbTablaEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTablaEditar.Name = "cmbTablaEditar";
-            this.cmbTablaEditar.Size = new System.Drawing.Size(164, 21);
+            this.cmbTablaEditar.Size = new System.Drawing.Size(217, 24);
             this.cmbTablaEditar.TabIndex = 1;
             // 
             // btnQuitarTablaEditar
             // 
             this.btnQuitarTablaEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitarTablaEditar.Image")));
             this.btnQuitarTablaEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnQuitarTablaEditar.Location = new System.Drawing.Point(138, 64);
+            this.btnQuitarTablaEditar.Location = new System.Drawing.Point(184, 79);
+            this.btnQuitarTablaEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQuitarTablaEditar.Name = "btnQuitarTablaEditar";
-            this.btnQuitarTablaEditar.Size = new System.Drawing.Size(72, 36);
+            this.btnQuitarTablaEditar.Size = new System.Drawing.Size(96, 44);
             this.btnQuitarTablaEditar.TabIndex = 4;
             this.btnQuitarTablaEditar.Text = "Quitar";
             this.btnQuitarTablaEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -617,9 +618,10 @@
             // lblTablaEditar
             // 
             this.lblTablaEditar.AutoSize = true;
-            this.lblTablaEditar.Location = new System.Drawing.Point(16, 31);
+            this.lblTablaEditar.Location = new System.Drawing.Point(21, 38);
+            this.lblTablaEditar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTablaEditar.Name = "lblTablaEditar";
-            this.lblTablaEditar.Size = new System.Drawing.Size(34, 13);
+            this.lblTablaEditar.Size = new System.Drawing.Size(44, 17);
             this.lblTablaEditar.TabIndex = 0;
             this.lblTablaEditar.Text = "Tabla";
             // 
@@ -627,8 +629,8 @@
             // 
             this.tbpCreacionConsulta.Controls.Add(this.dgvTablasCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.dgvCamposCreacion);
-            this.tbpCreacionConsulta.Controls.Add(this.textBox1);
-            this.tbpCreacionConsulta.Controls.Add(this.label1);
+            this.tbpCreacionConsulta.Controls.Add(this.txtConsultaCreacion);
+            this.tbpCreacionConsulta.Controls.Add(this.lblConsultaCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.gbxCondiciones);
             this.tbpCreacionConsulta.Controls.Add(this.btnCancelarCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.btnGuardarCreacion);
@@ -638,13 +640,48 @@
             this.tbpCreacionConsulta.Controls.Add(this.gbxOrdenCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.gbxCamposCreacion);
             this.tbpCreacionConsulta.Controls.Add(this.gbxTablasCreacion);
-            this.tbpCreacionConsulta.Location = new System.Drawing.Point(4, 22);
+            this.tbpCreacionConsulta.Location = new System.Drawing.Point(4, 25);
+            this.tbpCreacionConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbpCreacionConsulta.Name = "tbpCreacionConsulta";
-            this.tbpCreacionConsulta.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpCreacionConsulta.Size = new System.Drawing.Size(792, 485);
+            this.tbpCreacionConsulta.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpCreacionConsulta.Size = new System.Drawing.Size(1059, 600);
             this.tbpCreacionConsulta.TabIndex = 0;
             this.tbpCreacionConsulta.Text = "Creación de Consulta";
             this.tbpCreacionConsulta.UseVisualStyleBackColor = true;
+            // 
+            // dgvTablasCreacion
+            // 
+            this.dgvTablasCreacion.AllowUserToAddRows = false;
+            this.dgvTablasCreacion.AllowUserToDeleteRows = false;
+            this.dgvTablasCreacion.AllowUserToResizeRows = false;
+            this.dgvTablasCreacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvTablasCreacion.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvTablasCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTablasCreacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvTablasCreacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTablasCreacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTablasCreacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmTabla});
+            this.dgvTablasCreacion.Location = new System.Drawing.Point(417, 57);
+            this.dgvTablasCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTablasCreacion.MultiSelect = false;
+            this.dgvTablasCreacion.Name = "dgvTablasCreacion";
+            this.dgvTablasCreacion.ReadOnly = true;
+            this.dgvTablasCreacion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTablasCreacion.RowHeadersVisible = false;
+            this.dgvTablasCreacion.RowHeadersWidth = 51;
+            this.dgvTablasCreacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvTablasCreacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTablasCreacion.Size = new System.Drawing.Size(300, 165);
+            this.dgvTablasCreacion.TabIndex = 22;
+            // 
+            // clmTabla
+            // 
+            this.clmTabla.HeaderText = "Tabla";
+            this.clmTabla.MinimumWidth = 6;
+            this.clmTabla.Name = "clmTabla";
+            this.clmTabla.ReadOnly = true;
+            this.clmTabla.Width = 73;
             // 
             // dgvCamposCreacion
             // 
@@ -660,7 +697,8 @@
             this.dgvCamposCreacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmCampo,
             this.clmAlias});
-            this.dgvCamposCreacion.Location = new System.Drawing.Point(544, 46);
+            this.dgvCamposCreacion.Location = new System.Drawing.Point(725, 57);
+            this.dgvCamposCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCamposCreacion.MultiSelect = false;
             this.dgvCamposCreacion.Name = "dgvCamposCreacion";
             this.dgvCamposCreacion.ReadOnly = true;
@@ -669,7 +707,7 @@
             this.dgvCamposCreacion.RowHeadersWidth = 51;
             this.dgvCamposCreacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCamposCreacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCamposCreacion.Size = new System.Drawing.Size(214, 134);
+            this.dgvCamposCreacion.Size = new System.Drawing.Size(285, 165);
             this.dgvCamposCreacion.TabIndex = 21;
             // 
             // clmCampo
@@ -679,101 +717,89 @@
             this.clmCampo.MinimumWidth = 6;
             this.clmCampo.Name = "clmCampo";
             this.clmCampo.ReadOnly = true;
-            this.clmCampo.Width = 70;
+            this.clmCampo.Width = 88;
             // 
             // clmAlias
             // 
             this.clmAlias.HeaderText = "Alias";
+            this.clmAlias.MinimumWidth = 6;
             this.clmAlias.Name = "clmAlias";
             this.clmAlias.ReadOnly = true;
-            this.clmAlias.Width = 54;
+            this.clmAlias.Width = 67;
             // 
-            // textBox1
+            // txtConsultaCreacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(400, 394);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(358, 20);
-            this.textBox1.TabIndex = 14;
+            this.txtConsultaCreacion.Location = new System.Drawing.Point(533, 485);
+            this.txtConsultaCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConsultaCreacion.Name = "txtConsultaCreacion";
+            this.txtConsultaCreacion.Size = new System.Drawing.Size(476, 22);
+            this.txtConsultaCreacion.TabIndex = 14;
             // 
-            // label1
+            // lblConsultaCreacion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(310, 397);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "La Consulta";
+            this.lblConsultaCreacion.AutoSize = true;
+            this.lblConsultaCreacion.Location = new System.Drawing.Point(413, 489);
+            this.lblConsultaCreacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblConsultaCreacion.Name = "lblConsultaCreacion";
+            this.lblConsultaCreacion.Size = new System.Drawing.Size(83, 17);
+            this.lblConsultaCreacion.TabIndex = 13;
+            this.lblConsultaCreacion.Text = "La Consulta";
             // 
             // gbxCondiciones
             // 
-            this.gbxCondiciones.Controls.Add(this.button1);
-            this.gbxCondiciones.Controls.Add(this.button2);
-            this.gbxCondiciones.Controls.Add(this.groupBox1);
+            this.gbxCondiciones.Controls.Add(this.btnAgregarCondiCreacion);
+            this.gbxCondiciones.Controls.Add(this.btnQuitarCondiCreacion);
+            this.gbxCondiciones.Controls.Add(this.gbxLogicaCreacion);
             this.gbxCondiciones.Controls.Add(this.gbxComparacionCreacion);
-            this.gbxCondiciones.Location = new System.Drawing.Point(313, 194);
+            this.gbxCondiciones.Location = new System.Drawing.Point(417, 239);
+            this.gbxCondiciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxCondiciones.Name = "gbxCondiciones";
-            this.gbxCondiciones.Size = new System.Drawing.Size(445, 194);
+            this.gbxCondiciones.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxCondiciones.Size = new System.Drawing.Size(593, 239);
             this.gbxCondiciones.TabIndex = 12;
             this.gbxCondiciones.TabStop = false;
             this.gbxCondiciones.Text = "Condicionales de la Consulta";
             // 
-            // button1
+            // btnAgregarCondiCreacion
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(128, 149);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 36);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Agregar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAgregarCondiCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarCondiCreacion.Image")));
+            this.btnAgregarCondiCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarCondiCreacion.Location = new System.Drawing.Point(171, 183);
+            this.btnAgregarCondiCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarCondiCreacion.Name = "btnAgregarCondiCreacion";
+            this.btnAgregarCondiCreacion.Size = new System.Drawing.Size(113, 44);
+            this.btnAgregarCondiCreacion.TabIndex = 13;
+            this.btnAgregarCondiCreacion.Text = "Agregar";
+            this.btnAgregarCondiCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarCondiCreacion.UseVisualStyleBackColor = true;
+            this.btnAgregarCondiCreacion.Click += new System.EventHandler(this.btnAgregarCondiCreacion_Click);
             // 
-            // button2
+            // btnQuitarCondiCreacion
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(231, 149);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(72, 36);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Quitar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnQuitarCondiCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitarCondiCreacion.Image")));
+            this.btnQuitarCondiCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnQuitarCondiCreacion.Location = new System.Drawing.Point(292, 187);
+            this.btnQuitarCondiCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuitarCondiCreacion.Name = "btnQuitarCondiCreacion";
+            this.btnQuitarCondiCreacion.Size = new System.Drawing.Size(96, 44);
+            this.btnQuitarCondiCreacion.TabIndex = 12;
+            this.btnQuitarCondiCreacion.Text = "Quitar";
+            this.btnQuitarCondiCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuitarCondiCreacion.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbxLogicaCreacion
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(285, 28);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(143, 115);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lógica de la Consulta";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(51, 63);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(41, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "OR";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(51, 40);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(48, 17);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "AND";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.gbxLogicaCreacion.Controls.Add(this.chkOrCreacion);
+            this.gbxLogicaCreacion.Controls.Add(this.chkAndCreacion);
+            this.gbxLogicaCreacion.Enabled = false;
+            this.gbxLogicaCreacion.Location = new System.Drawing.Point(380, 34);
+            this.gbxLogicaCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxLogicaCreacion.Name = "gbxLogicaCreacion";
+            this.gbxLogicaCreacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxLogicaCreacion.Size = new System.Drawing.Size(191, 142);
+            this.gbxLogicaCreacion.TabIndex = 11;
+            this.gbxLogicaCreacion.TabStop = false;
+            this.gbxLogicaCreacion.Text = "Lógica de la Consulta";
             // 
             // gbxComparacionCreacion
             // 
@@ -784,9 +810,11 @@
             this.gbxComparacionCreacion.Controls.Add(this.rbtnIgualCreacion);
             this.gbxComparacionCreacion.Controls.Add(this.rbtnMayorCreacion);
             this.gbxComparacionCreacion.Controls.Add(this.rbtnMenorCreacion);
-            this.gbxComparacionCreacion.Location = new System.Drawing.Point(16, 28);
+            this.gbxComparacionCreacion.Location = new System.Drawing.Point(21, 34);
+            this.gbxComparacionCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxComparacionCreacion.Name = "gbxComparacionCreacion";
-            this.gbxComparacionCreacion.Size = new System.Drawing.Size(253, 115);
+            this.gbxComparacionCreacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxComparacionCreacion.Size = new System.Drawing.Size(337, 142);
             this.gbxComparacionCreacion.TabIndex = 2;
             this.gbxComparacionCreacion.TabStop = false;
             this.gbxComparacionCreacion.Text = "Comparación en la consulta";
@@ -794,42 +822,47 @@
             // cmbCampoComparacionCreacion
             // 
             this.cmbCampoComparacionCreacion.FormattingEnabled = true;
-            this.cmbCampoComparacionCreacion.Location = new System.Drawing.Point(67, 24);
+            this.cmbCampoComparacionCreacion.Location = new System.Drawing.Point(89, 30);
+            this.cmbCampoComparacionCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCampoComparacionCreacion.Name = "cmbCampoComparacionCreacion";
-            this.cmbCampoComparacionCreacion.Size = new System.Drawing.Size(164, 21);
+            this.cmbCampoComparacionCreacion.Size = new System.Drawing.Size(217, 24);
             this.cmbCampoComparacionCreacion.TabIndex = 8;
             // 
             // lblComparacionCampoCreacion
             // 
             this.lblComparacionCampoCreacion.AutoSize = true;
-            this.lblComparacionCampoCreacion.Location = new System.Drawing.Point(16, 27);
+            this.lblComparacionCampoCreacion.Location = new System.Drawing.Point(21, 33);
+            this.lblComparacionCampoCreacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblComparacionCampoCreacion.Name = "lblComparacionCampoCreacion";
-            this.lblComparacionCampoCreacion.Size = new System.Drawing.Size(40, 13);
+            this.lblComparacionCampoCreacion.Size = new System.Drawing.Size(52, 17);
             this.lblComparacionCampoCreacion.TabIndex = 8;
             this.lblComparacionCampoCreacion.Text = "Campo";
             // 
             // txtValorCreacion
             // 
-            this.txtValorCreacion.Location = new System.Drawing.Point(67, 57);
+            this.txtValorCreacion.Location = new System.Drawing.Point(89, 70);
+            this.txtValorCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtValorCreacion.Name = "txtValorCreacion";
-            this.txtValorCreacion.Size = new System.Drawing.Size(164, 20);
+            this.txtValorCreacion.Size = new System.Drawing.Size(217, 22);
             this.txtValorCreacion.TabIndex = 7;
             // 
             // lblValorCreacion
             // 
             this.lblValorCreacion.AutoSize = true;
-            this.lblValorCreacion.Location = new System.Drawing.Point(17, 60);
+            this.lblValorCreacion.Location = new System.Drawing.Point(23, 74);
+            this.lblValorCreacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValorCreacion.Name = "lblValorCreacion";
-            this.lblValorCreacion.Size = new System.Drawing.Size(31, 13);
+            this.lblValorCreacion.Size = new System.Drawing.Size(41, 17);
             this.lblValorCreacion.TabIndex = 7;
             this.lblValorCreacion.Text = "Valor";
             // 
             // rbtnIgualCreacion
             // 
             this.rbtnIgualCreacion.AutoSize = true;
-            this.rbtnIgualCreacion.Location = new System.Drawing.Point(109, 92);
+            this.rbtnIgualCreacion.Location = new System.Drawing.Point(145, 113);
+            this.rbtnIgualCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnIgualCreacion.Name = "rbtnIgualCreacion";
-            this.rbtnIgualCreacion.Size = new System.Drawing.Size(31, 17);
+            this.rbtnIgualCreacion.Size = new System.Drawing.Size(37, 21);
             this.rbtnIgualCreacion.TabIndex = 2;
             this.rbtnIgualCreacion.TabStop = true;
             this.rbtnIgualCreacion.Text = "=";
@@ -838,9 +871,10 @@
             // rbtnMayorCreacion
             // 
             this.rbtnMayorCreacion.AutoSize = true;
-            this.rbtnMayorCreacion.Location = new System.Drawing.Point(71, 92);
+            this.rbtnMayorCreacion.Location = new System.Drawing.Point(95, 113);
+            this.rbtnMayorCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnMayorCreacion.Name = "rbtnMayorCreacion";
-            this.rbtnMayorCreacion.Size = new System.Drawing.Size(31, 17);
+            this.rbtnMayorCreacion.Size = new System.Drawing.Size(37, 21);
             this.rbtnMayorCreacion.TabIndex = 1;
             this.rbtnMayorCreacion.TabStop = true;
             this.rbtnMayorCreacion.Text = ">";
@@ -849,9 +883,10 @@
             // rbtnMenorCreacion
             // 
             this.rbtnMenorCreacion.AutoSize = true;
-            this.rbtnMenorCreacion.Location = new System.Drawing.Point(147, 92);
+            this.rbtnMenorCreacion.Location = new System.Drawing.Point(196, 113);
+            this.rbtnMenorCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnMenorCreacion.Name = "rbtnMenorCreacion";
-            this.rbtnMenorCreacion.Size = new System.Drawing.Size(31, 17);
+            this.rbtnMenorCreacion.Size = new System.Drawing.Size(37, 21);
             this.rbtnMenorCreacion.TabIndex = 0;
             this.rbtnMenorCreacion.TabStop = true;
             this.rbtnMenorCreacion.Text = "<";
@@ -861,9 +896,10 @@
             // 
             this.btnCancelarCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarCreacion.Image")));
             this.btnCancelarCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelarCreacion.Location = new System.Drawing.Point(437, 432);
+            this.btnCancelarCreacion.Location = new System.Drawing.Point(583, 532);
+            this.btnCancelarCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelarCreacion.Name = "btnCancelarCreacion";
-            this.btnCancelarCreacion.Size = new System.Drawing.Size(90, 36);
+            this.btnCancelarCreacion.Size = new System.Drawing.Size(120, 44);
             this.btnCancelarCreacion.TabIndex = 10;
             this.btnCancelarCreacion.Text = "Cancelar";
             this.btnCancelarCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -873,21 +909,25 @@
             // 
             this.btnGuardarCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarCreacion.Image")));
             this.btnGuardarCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarCreacion.Location = new System.Drawing.Point(544, 432);
+            this.btnGuardarCreacion.Location = new System.Drawing.Point(725, 532);
+            this.btnGuardarCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardarCreacion.Name = "btnGuardarCreacion";
-            this.btnGuardarCreacion.Size = new System.Drawing.Size(85, 36);
+            this.btnGuardarCreacion.Size = new System.Drawing.Size(113, 44);
             this.btnGuardarCreacion.TabIndex = 9;
             this.btnGuardarCreacion.Text = "Guardar";
             this.btnGuardarCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardarCreacion.UseVisualStyleBackColor = true;
+            this.btnGuardarCreacion.Click += new System.EventHandler(this.btnGuardarCreacion_Click);
             // 
             // gbxAgruparCreacion
             // 
             this.gbxAgruparCreacion.Controls.Add(this.cmbCampoAgruparCreacion);
             this.gbxAgruparCreacion.Controls.Add(this.lblCampAgruparCreacion);
-            this.gbxAgruparCreacion.Location = new System.Drawing.Point(21, 304);
+            this.gbxAgruparCreacion.Location = new System.Drawing.Point(28, 374);
+            this.gbxAgruparCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxAgruparCreacion.Name = "gbxAgruparCreacion";
-            this.gbxAgruparCreacion.Size = new System.Drawing.Size(253, 70);
+            this.gbxAgruparCreacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxAgruparCreacion.Size = new System.Drawing.Size(337, 86);
             this.gbxAgruparCreacion.TabIndex = 7;
             this.gbxAgruparCreacion.TabStop = false;
             this.gbxAgruparCreacion.Text = "Agrupar la Consulta";
@@ -895,68 +935,52 @@
             // cmbCampoAgruparCreacion
             // 
             this.cmbCampoAgruparCreacion.FormattingEnabled = true;
-            this.cmbCampoAgruparCreacion.Location = new System.Drawing.Point(67, 31);
+            this.cmbCampoAgruparCreacion.Location = new System.Drawing.Point(89, 38);
+            this.cmbCampoAgruparCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCampoAgruparCreacion.Name = "cmbCampoAgruparCreacion";
-            this.cmbCampoAgruparCreacion.Size = new System.Drawing.Size(164, 21);
+            this.cmbCampoAgruparCreacion.Size = new System.Drawing.Size(217, 24);
             this.cmbCampoAgruparCreacion.TabIndex = 9;
             // 
             // lblCampAgruparCreacion
             // 
             this.lblCampAgruparCreacion.AutoSize = true;
-            this.lblCampAgruparCreacion.Location = new System.Drawing.Point(14, 34);
+            this.lblCampAgruparCreacion.Location = new System.Drawing.Point(19, 42);
+            this.lblCampAgruparCreacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCampAgruparCreacion.Name = "lblCampAgruparCreacion";
-            this.lblCampAgruparCreacion.Size = new System.Drawing.Size(40, 13);
+            this.lblCampAgruparCreacion.Size = new System.Drawing.Size(52, 17);
             this.lblCampAgruparCreacion.TabIndex = 10;
             this.lblCampAgruparCreacion.Text = "Campo";
             // 
             // txtNombreCreacion
             // 
-            this.txtNombreCreacion.Location = new System.Drawing.Point(450, 20);
+            this.txtNombreCreacion.Location = new System.Drawing.Point(600, 25);
+            this.txtNombreCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreCreacion.Name = "txtNombreCreacion";
-            this.txtNombreCreacion.Size = new System.Drawing.Size(308, 20);
+            this.txtNombreCreacion.Size = new System.Drawing.Size(409, 22);
             this.txtNombreCreacion.TabIndex = 6;
             // 
             // lblNombreCreacion
             // 
             this.lblNombreCreacion.AutoSize = true;
-            this.lblNombreCreacion.Location = new System.Drawing.Point(310, 23);
+            this.lblNombreCreacion.Location = new System.Drawing.Point(413, 28);
+            this.lblNombreCreacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreCreacion.Name = "lblNombreCreacion";
-            this.lblNombreCreacion.Size = new System.Drawing.Size(114, 13);
+            this.lblNombreCreacion.Size = new System.Drawing.Size(152, 17);
             this.lblNombreCreacion.TabIndex = 5;
             this.lblNombreCreacion.Text = "Nombre de la Consulta";
             // 
             // gbxOrdenCreacion
             // 
-            this.gbxOrdenCreacion.Controls.Add(this.rbtnMenorMayorCreacion);
-            this.gbxOrdenCreacion.Controls.Add(this.rbtnASCCreacion);
-            this.gbxOrdenCreacion.Location = new System.Drawing.Point(88, 380);
+            this.gbxOrdenCreacion.Controls.Add(this.chkDescCreacion);
+            this.gbxOrdenCreacion.Controls.Add(this.chkASCCreacion);
+            this.gbxOrdenCreacion.Location = new System.Drawing.Point(117, 468);
+            this.gbxOrdenCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxOrdenCreacion.Name = "gbxOrdenCreacion";
-            this.gbxOrdenCreacion.Size = new System.Drawing.Size(128, 88);
+            this.gbxOrdenCreacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxOrdenCreacion.Size = new System.Drawing.Size(171, 108);
             this.gbxOrdenCreacion.TabIndex = 3;
             this.gbxOrdenCreacion.TabStop = false;
             this.gbxOrdenCreacion.Text = "Orden de la Consulta";
-            // 
-            // rbtnMenorMayorCreacion
-            // 
-            this.rbtnMenorMayorCreacion.AutoSize = true;
-            this.rbtnMenorMayorCreacion.Location = new System.Drawing.Point(36, 52);
-            this.rbtnMenorMayorCreacion.Name = "rbtnMenorMayorCreacion";
-            this.rbtnMenorMayorCreacion.Size = new System.Drawing.Size(54, 17);
-            this.rbtnMenorMayorCreacion.TabIndex = 1;
-            this.rbtnMenorMayorCreacion.TabStop = true;
-            this.rbtnMenorMayorCreacion.Text = "DESC";
-            this.rbtnMenorMayorCreacion.UseVisualStyleBackColor = true;
-            // 
-            // rbtnASCCreacion
-            // 
-            this.rbtnASCCreacion.AutoSize = true;
-            this.rbtnASCCreacion.Location = new System.Drawing.Point(36, 29);
-            this.rbtnASCCreacion.Name = "rbtnASCCreacion";
-            this.rbtnASCCreacion.Size = new System.Drawing.Size(46, 17);
-            this.rbtnASCCreacion.TabIndex = 0;
-            this.rbtnASCCreacion.TabStop = true;
-            this.rbtnASCCreacion.Text = "ASC";
-            this.rbtnASCCreacion.UseVisualStyleBackColor = true;
             // 
             // gbxCamposCreacion
             // 
@@ -967,9 +991,11 @@
             this.gbxCamposCreacion.Controls.Add(this.btnQuitarCampoCreacion);
             this.gbxCamposCreacion.Controls.Add(this.cmbCampoCreacion);
             this.gbxCamposCreacion.Controls.Add(this.lblCampoCreacion);
-            this.gbxCamposCreacion.Location = new System.Drawing.Point(21, 137);
+            this.gbxCamposCreacion.Location = new System.Drawing.Point(28, 169);
+            this.gbxCamposCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxCamposCreacion.Name = "gbxCamposCreacion";
-            this.gbxCamposCreacion.Size = new System.Drawing.Size(253, 158);
+            this.gbxCamposCreacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxCamposCreacion.Size = new System.Drawing.Size(337, 194);
             this.gbxCamposCreacion.TabIndex = 1;
             this.gbxCamposCreacion.TabStop = false;
             this.gbxCamposCreacion.Text = "Campos de la Consulta";
@@ -977,9 +1003,10 @@
             // chkTodosCamp
             // 
             this.chkTodosCamp.AutoSize = true;
-            this.chkTodosCamp.Location = new System.Drawing.Point(67, 26);
+            this.chkTodosCamp.Location = new System.Drawing.Point(89, 32);
+            this.chkTodosCamp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkTodosCamp.Name = "chkTodosCamp";
-            this.chkTodosCamp.Size = new System.Drawing.Size(113, 17);
+            this.chkTodosCamp.Size = new System.Drawing.Size(147, 21);
             this.chkTodosCamp.TabIndex = 10;
             this.chkTodosCamp.Text = "Todos los Campos";
             this.chkTodosCamp.UseVisualStyleBackColor = true;
@@ -987,17 +1014,19 @@
             // 
             // txtAliasCreacion
             // 
-            this.txtAliasCreacion.Location = new System.Drawing.Point(67, 84);
+            this.txtAliasCreacion.Location = new System.Drawing.Point(89, 103);
+            this.txtAliasCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAliasCreacion.Name = "txtAliasCreacion";
-            this.txtAliasCreacion.Size = new System.Drawing.Size(164, 20);
+            this.txtAliasCreacion.Size = new System.Drawing.Size(217, 22);
             this.txtAliasCreacion.TabIndex = 8;
             // 
             // lblAliasCreacion
             // 
             this.lblAliasCreacion.AutoSize = true;
-            this.lblAliasCreacion.Location = new System.Drawing.Point(17, 87);
+            this.lblAliasCreacion.Location = new System.Drawing.Point(23, 107);
+            this.lblAliasCreacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAliasCreacion.Name = "lblAliasCreacion";
-            this.lblAliasCreacion.Size = new System.Drawing.Size(29, 13);
+            this.lblAliasCreacion.Size = new System.Drawing.Size(38, 17);
             this.lblAliasCreacion.TabIndex = 9;
             this.lblAliasCreacion.Text = "Alias";
             // 
@@ -1005,9 +1034,10 @@
             // 
             this.btnAgregarCampoCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarCampoCreacion.Image")));
             this.btnAgregarCampoCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarCampoCreacion.Location = new System.Drawing.Point(35, 111);
+            this.btnAgregarCampoCreacion.Location = new System.Drawing.Point(47, 137);
+            this.btnAgregarCampoCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregarCampoCreacion.Name = "btnAgregarCampoCreacion";
-            this.btnAgregarCampoCreacion.Size = new System.Drawing.Size(85, 36);
+            this.btnAgregarCampoCreacion.Size = new System.Drawing.Size(113, 44);
             this.btnAgregarCampoCreacion.TabIndex = 7;
             this.btnAgregarCampoCreacion.Text = "Agregar";
             this.btnAgregarCampoCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1018,9 +1048,10 @@
             // 
             this.btnQuitarCampoCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitarCampoCreacion.Image")));
             this.btnQuitarCampoCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnQuitarCampoCreacion.Location = new System.Drawing.Point(138, 111);
+            this.btnQuitarCampoCreacion.Location = new System.Drawing.Point(184, 137);
+            this.btnQuitarCampoCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQuitarCampoCreacion.Name = "btnQuitarCampoCreacion";
-            this.btnQuitarCampoCreacion.Size = new System.Drawing.Size(72, 36);
+            this.btnQuitarCampoCreacion.Size = new System.Drawing.Size(96, 44);
             this.btnQuitarCampoCreacion.TabIndex = 6;
             this.btnQuitarCampoCreacion.Text = "Quitar";
             this.btnQuitarCampoCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1030,17 +1061,19 @@
             // cmbCampoCreacion
             // 
             this.cmbCampoCreacion.FormattingEnabled = true;
-            this.cmbCampoCreacion.Location = new System.Drawing.Point(67, 57);
+            this.cmbCampoCreacion.Location = new System.Drawing.Point(89, 70);
+            this.cmbCampoCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCampoCreacion.Name = "cmbCampoCreacion";
-            this.cmbCampoCreacion.Size = new System.Drawing.Size(164, 21);
+            this.cmbCampoCreacion.Size = new System.Drawing.Size(217, 24);
             this.cmbCampoCreacion.TabIndex = 7;
             // 
             // lblCampoCreacion
             // 
             this.lblCampoCreacion.AutoSize = true;
-            this.lblCampoCreacion.Location = new System.Drawing.Point(16, 60);
+            this.lblCampoCreacion.Location = new System.Drawing.Point(21, 74);
+            this.lblCampoCreacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCampoCreacion.Name = "lblCampoCreacion";
-            this.lblCampoCreacion.Size = new System.Drawing.Size(40, 13);
+            this.lblCampoCreacion.Size = new System.Drawing.Size(52, 17);
             this.lblCampoCreacion.TabIndex = 6;
             this.lblCampoCreacion.Text = "Campo";
             // 
@@ -1050,9 +1083,11 @@
             this.gbxTablasCreacion.Controls.Add(this.cmbTablasCreacion);
             this.gbxTablasCreacion.Controls.Add(this.btnQuitarTablaCreacion);
             this.gbxTablasCreacion.Controls.Add(this.lblTablaCreacion);
-            this.gbxTablasCreacion.Location = new System.Drawing.Point(21, 20);
+            this.gbxTablasCreacion.Location = new System.Drawing.Point(28, 25);
+            this.gbxTablasCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxTablasCreacion.Name = "gbxTablasCreacion";
-            this.gbxTablasCreacion.Size = new System.Drawing.Size(253, 111);
+            this.gbxTablasCreacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxTablasCreacion.Size = new System.Drawing.Size(337, 137);
             this.gbxTablasCreacion.TabIndex = 0;
             this.gbxTablasCreacion.TabStop = false;
             this.gbxTablasCreacion.Text = "Tablas de la Consulta";
@@ -1061,9 +1096,10 @@
             // 
             this.btnAgregarTablaCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarTablaCreacion.Image")));
             this.btnAgregarTablaCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarTablaCreacion.Location = new System.Drawing.Point(35, 64);
+            this.btnAgregarTablaCreacion.Location = new System.Drawing.Point(47, 79);
+            this.btnAgregarTablaCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregarTablaCreacion.Name = "btnAgregarTablaCreacion";
-            this.btnAgregarTablaCreacion.Size = new System.Drawing.Size(85, 36);
+            this.btnAgregarTablaCreacion.Size = new System.Drawing.Size(113, 44);
             this.btnAgregarTablaCreacion.TabIndex = 5;
             this.btnAgregarTablaCreacion.Text = "Agregar";
             this.btnAgregarTablaCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1073,18 +1109,20 @@
             // cmbTablasCreacion
             // 
             this.cmbTablasCreacion.FormattingEnabled = true;
-            this.cmbTablasCreacion.Location = new System.Drawing.Point(67, 28);
+            this.cmbTablasCreacion.Location = new System.Drawing.Point(89, 34);
+            this.cmbTablasCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTablasCreacion.Name = "cmbTablasCreacion";
-            this.cmbTablasCreacion.Size = new System.Drawing.Size(164, 21);
+            this.cmbTablasCreacion.Size = new System.Drawing.Size(217, 24);
             this.cmbTablasCreacion.TabIndex = 1;
             // 
             // btnQuitarTablaCreacion
             // 
             this.btnQuitarTablaCreacion.Image = ((System.Drawing.Image)(resources.GetObject("btnQuitarTablaCreacion.Image")));
             this.btnQuitarTablaCreacion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnQuitarTablaCreacion.Location = new System.Drawing.Point(138, 64);
+            this.btnQuitarTablaCreacion.Location = new System.Drawing.Point(184, 79);
+            this.btnQuitarTablaCreacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQuitarTablaCreacion.Name = "btnQuitarTablaCreacion";
-            this.btnQuitarTablaCreacion.Size = new System.Drawing.Size(72, 36);
+            this.btnQuitarTablaCreacion.Size = new System.Drawing.Size(96, 44);
             this.btnQuitarTablaCreacion.TabIndex = 4;
             this.btnQuitarTablaCreacion.Text = "Quitar";
             this.btnQuitarTablaCreacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1094,9 +1132,10 @@
             // lblTablaCreacion
             // 
             this.lblTablaCreacion.AutoSize = true;
-            this.lblTablaCreacion.Location = new System.Drawing.Point(16, 31);
+            this.lblTablaCreacion.Location = new System.Drawing.Point(21, 38);
+            this.lblTablaCreacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTablaCreacion.Name = "lblTablaCreacion";
-            this.lblTablaCreacion.Size = new System.Drawing.Size(34, 13);
+            this.lblTablaCreacion.Size = new System.Drawing.Size(44, 17);
             this.lblTablaCreacion.TabIndex = 0;
             this.lblTablaCreacion.Text = "Tabla";
             // 
@@ -1106,64 +1145,114 @@
             this.tbcConsultaNormal.Controls.Add(this.tbpMantenimientoConsulta);
             this.tbcConsultaNormal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcConsultaNormal.Location = new System.Drawing.Point(0, 0);
+            this.tbcConsultaNormal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbcConsultaNormal.Name = "tbcConsultaNormal";
             this.tbcConsultaNormal.SelectedIndex = 0;
-            this.tbcConsultaNormal.Size = new System.Drawing.Size(800, 511);
+            this.tbcConsultaNormal.Size = new System.Drawing.Size(1067, 629);
             this.tbcConsultaNormal.TabIndex = 1;
             // 
-            // dgvTablasCreacion
+            // chkASCCreacion
             // 
-            this.dgvTablasCreacion.AllowUserToAddRows = false;
-            this.dgvTablasCreacion.AllowUserToDeleteRows = false;
-            this.dgvTablasCreacion.AllowUserToResizeRows = false;
-            this.dgvTablasCreacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvTablasCreacion.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvTablasCreacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvTablasCreacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvTablasCreacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvTablasCreacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTablasCreacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmTabla});
-            this.dgvTablasCreacion.Location = new System.Drawing.Point(313, 46);
-            this.dgvTablasCreacion.MultiSelect = false;
-            this.dgvTablasCreacion.Name = "dgvTablasCreacion";
-            this.dgvTablasCreacion.ReadOnly = true;
-            this.dgvTablasCreacion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvTablasCreacion.RowHeadersVisible = false;
-            this.dgvTablasCreacion.RowHeadersWidth = 51;
-            this.dgvTablasCreacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvTablasCreacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTablasCreacion.Size = new System.Drawing.Size(225, 134);
-            this.dgvTablasCreacion.TabIndex = 22;
+            this.chkASCCreacion.AutoSize = true;
+            this.chkASCCreacion.Location = new System.Drawing.Point(55, 36);
+            this.chkASCCreacion.Name = "chkASCCreacion";
+            this.chkASCCreacion.Size = new System.Drawing.Size(57, 21);
+            this.chkASCCreacion.TabIndex = 2;
+            this.chkASCCreacion.Text = "ASC";
+            this.chkASCCreacion.UseVisualStyleBackColor = true;
             // 
-            // clmTabla
+            // chkDescCreacion
             // 
-            this.clmTabla.HeaderText = "Tabla";
-            this.clmTabla.Name = "clmTabla";
-            this.clmTabla.ReadOnly = true;
-            this.clmTabla.Width = 59;
+            this.chkDescCreacion.AutoSize = true;
+            this.chkDescCreacion.Location = new System.Drawing.Point(55, 63);
+            this.chkDescCreacion.Name = "chkDescCreacion";
+            this.chkDescCreacion.Size = new System.Drawing.Size(67, 21);
+            this.chkDescCreacion.TabIndex = 23;
+            this.chkDescCreacion.Text = "DESC";
+            this.chkDescCreacion.UseVisualStyleBackColor = true;
+            // 
+            // chkAndCreacion
+            // 
+            this.chkAndCreacion.AutoSize = true;
+            this.chkAndCreacion.Location = new System.Drawing.Point(67, 46);
+            this.chkAndCreacion.Name = "chkAndCreacion";
+            this.chkAndCreacion.Size = new System.Drawing.Size(59, 21);
+            this.chkAndCreacion.TabIndex = 2;
+            this.chkAndCreacion.Text = "AND";
+            this.chkAndCreacion.UseVisualStyleBackColor = true;
+            // 
+            // chkOrCreacion
+            // 
+            this.chkOrCreacion.AutoSize = true;
+            this.chkOrCreacion.Location = new System.Drawing.Point(67, 74);
+            this.chkOrCreacion.Name = "chkOrCreacion";
+            this.chkOrCreacion.Size = new System.Drawing.Size(51, 21);
+            this.chkOrCreacion.TabIndex = 3;
+            this.chkOrCreacion.Text = "OR";
+            this.chkOrCreacion.UseVisualStyleBackColor = true;
+            // 
+            // chkAscEditar
+            // 
+            this.chkAscEditar.AutoSize = true;
+            this.chkAscEditar.Location = new System.Drawing.Point(56, 34);
+            this.chkAscEditar.Name = "chkAscEditar";
+            this.chkAscEditar.Size = new System.Drawing.Size(57, 21);
+            this.chkAscEditar.TabIndex = 0;
+            this.chkAscEditar.Text = "ASC";
+            this.chkAscEditar.UseVisualStyleBackColor = true;
+            // 
+            // chkDescEditar
+            // 
+            this.chkDescEditar.AutoSize = true;
+            this.chkDescEditar.Location = new System.Drawing.Point(56, 62);
+            this.chkDescEditar.Name = "chkDescEditar";
+            this.chkDescEditar.Size = new System.Drawing.Size(67, 21);
+            this.chkDescEditar.TabIndex = 1;
+            this.chkDescEditar.Text = "DESC";
+            this.chkDescEditar.UseVisualStyleBackColor = true;
+            // 
+            // chkAndEditar
+            // 
+            this.chkAndEditar.AutoSize = true;
+            this.chkAndEditar.Location = new System.Drawing.Point(70, 47);
+            this.chkAndEditar.Name = "chkAndEditar";
+            this.chkAndEditar.Size = new System.Drawing.Size(59, 21);
+            this.chkAndEditar.TabIndex = 0;
+            this.chkAndEditar.Text = "AND";
+            this.chkAndEditar.UseVisualStyleBackColor = true;
+            // 
+            // chkOrEditar
+            // 
+            this.chkOrEditar.AutoSize = true;
+            this.chkOrEditar.Location = new System.Drawing.Point(70, 74);
+            this.chkOrEditar.Name = "chkOrEditar";
+            this.chkOrEditar.Size = new System.Drawing.Size(51, 21);
+            this.chkOrEditar.TabIndex = 1;
+            this.chkOrEditar.Text = "OR";
+            this.chkOrEditar.UseVisualStyleBackColor = true;
             // 
             // frmUsuarioAvanzado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 511);
+            this.ClientSize = new System.Drawing.Size(1067, 629);
             this.Controls.Add(this.tbcConsultaNormal);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmUsuarioAvanzado";
             this.Text = "Consultas Inteligentes";
             this.Load += new System.EventHandler(this.frmUsuarioAvanzado_Load);
             this.tbpMantenimientoConsulta.ResumeLayout(false);
             this.tbpMantenimientoConsulta.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbxCondicionalesEditar.ResumeLayout(false);
+            this.gbxLogicaEditar.ResumeLayout(false);
+            this.gbxLogicaEditar.PerformLayout();
+            this.gbxComparacionEditar.ResumeLayout(false);
+            this.gbxComparacionEditar.PerformLayout();
+            this.gbxAgruparEditar.ResumeLayout(false);
+            this.gbxAgruparEditar.PerformLayout();
+            this.gbxOrdenConsultaEditar.ResumeLayout(false);
+            this.gbxOrdenConsultaEditar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampoEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablaEditar)).EndInit();
             this.gbxCamposEditar.ResumeLayout(false);
@@ -1172,10 +1261,11 @@
             this.gbxConsultaEditar.PerformLayout();
             this.tbpCreacionConsulta.ResumeLayout(false);
             this.tbpCreacionConsulta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTablasCreacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCamposCreacion)).EndInit();
             this.gbxCondiciones.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbxLogicaCreacion.ResumeLayout(false);
+            this.gbxLogicaCreacion.PerformLayout();
             this.gbxComparacionCreacion.ResumeLayout(false);
             this.gbxComparacionCreacion.PerformLayout();
             this.gbxAgruparCreacion.ResumeLayout(false);
@@ -1187,7 +1277,6 @@
             this.gbxTablasCreacion.ResumeLayout(false);
             this.gbxTablasCreacion.PerformLayout();
             this.tbcConsultaNormal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTablasCreacion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1204,8 +1293,6 @@
         private System.Windows.Forms.TextBox txtNombreCreacion;
         private System.Windows.Forms.Label lblNombreCreacion;
         private System.Windows.Forms.GroupBox gbxOrdenCreacion;
-        private System.Windows.Forms.RadioButton rbtnMenorMayorCreacion;
-        private System.Windows.Forms.RadioButton rbtnASCCreacion;
         private System.Windows.Forms.GroupBox gbxComparacionCreacion;
         private System.Windows.Forms.ComboBox cmbCampoComparacionCreacion;
         private System.Windows.Forms.Label lblComparacionCampoCreacion;
@@ -1248,42 +1335,44 @@
         private System.Windows.Forms.ComboBox cmbTablaEditar;
         private System.Windows.Forms.Button btnQuitarTablaEditar;
         private System.Windows.Forms.Label lblTablaEditar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtConsultaCreacion;
+        private System.Windows.Forms.Label lblConsultaCreacion;
         private System.Windows.Forms.GroupBox gbxCondiciones;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Button btnAgregarCondiCreacion;
+        private System.Windows.Forms.Button btnQuitarCondiCreacion;
+        private System.Windows.Forms.GroupBox gbxLogicaCreacion;
+        private System.Windows.Forms.Button btnBuscarConsultaEditar;
+        private System.Windows.Forms.TextBox txtConsultaEditar;
+        private System.Windows.Forms.Label lblConsultaEditar;
+        private System.Windows.Forms.GroupBox gbxCondicionalesEditar;
+        private System.Windows.Forms.Button btnAgregarCondiEditar;
+        private System.Windows.Forms.Button btnQuitarCondiEditar;
+        private System.Windows.Forms.GroupBox gbxLogicaEditar;
+        private System.Windows.Forms.GroupBox gbxComparacionEditar;
+        private System.Windows.Forms.ComboBox cmbCampoComparacionEditar;
+        private System.Windows.Forms.Label lblCampoComparacionEditar;
+        private System.Windows.Forms.TextBox txtValorComparacionEditar;
+        private System.Windows.Forms.Label lblValorComparacionEditar;
+        private System.Windows.Forms.RadioButton rbtnIgualEditar;
+        private System.Windows.Forms.RadioButton rbtnMayorEditar;
+        private System.Windows.Forms.RadioButton rbtnMenorEditar;
+        private System.Windows.Forms.GroupBox gbxAgruparEditar;
+        private System.Windows.Forms.ComboBox cmbAgruparConsultaEditar;
+        private System.Windows.Forms.Label lblCampoAgruparCreacion;
+        private System.Windows.Forms.GroupBox gbxOrdenConsultaEditar;
         private System.Windows.Forms.CheckBox chkTodosCamp;
         private System.Windows.Forms.DataGridView dgvCamposCreacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCampo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmAlias;
         private System.Windows.Forms.DataGridView dgvTablasCreacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTabla;
+        private System.Windows.Forms.CheckBox chkOrCreacion;
+        private System.Windows.Forms.CheckBox chkAndCreacion;
+        private System.Windows.Forms.CheckBox chkDescCreacion;
+        private System.Windows.Forms.CheckBox chkASCCreacion;
+        private System.Windows.Forms.CheckBox chkOrEditar;
+        private System.Windows.Forms.CheckBox chkAndEditar;
+        private System.Windows.Forms.CheckBox chkDescEditar;
+        private System.Windows.Forms.CheckBox chkAscEditar;
     }
 }
