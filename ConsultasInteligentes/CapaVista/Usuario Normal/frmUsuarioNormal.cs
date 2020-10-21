@@ -26,11 +26,10 @@ namespace CapaVista.Usuario_Normal
         //variable que obtiene el dato del dgvCamposCreacion
         string campo;
         //nombre de la tabla de prueba
-        string tabla;
+        string tabla="EMPLEADO";
 
-        public frmUsuarioNormal(string Tabla)
+        public frmUsuarioNormal()
         {
-            tabla = Tabla;
             InitializeComponent();
             actualizardatagriew();
         }

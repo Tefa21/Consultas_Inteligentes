@@ -16,15 +16,12 @@ C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\obj\Debug
 C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
 C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.dll
 C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.pdb
-<<<<<<< HEAD
-=======
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\bin\Debug\CapaModelo.dll
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\bin\Debug\CapaModelo.pdb
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.csprojAssemblyReference.cache
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.dll
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.pdb
->>>>>>> eeb341413369f985114f98caf30ad9bc663aebb5
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\bin\Debug\CapaModelo.dll
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\bin\Debug\CapaModelo.pdb
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaModelo\obj\Debug\CapaModelo.csprojAssemblyReference.cache

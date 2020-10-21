@@ -57,14 +57,6 @@ C:\Users\TheVolts\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Deb
 C:\Users\TheVolts\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.pdb
 C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.dll
 C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.pdb
-<<<<<<< HEAD
-C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaVista.dll
-C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaVista.pdb
-C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaControlador.dll
-C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.dll
-C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaControlador.pdb
-C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.pdb
-=======
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.csprojAssemblyReference.cache
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.Properties.Resources.resources
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.Resultados.frmResultado.resources
@@ -82,7 +74,6 @@ C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bi
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaControlador.pdb
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.pdb
 C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
->>>>>>> eeb341413369f985114f98caf30ad9bc663aebb5
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.csprojAssemblyReference.cache
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.Properties.Resources.resources
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.Resultados.frmResultado.resources
@@ -91,11 +82,6 @@ C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.Usuario_Normal.frmUsuarioNormal.resources
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.csproj.GenerateResource.cache
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.csproj.CoreCompileInputs.cache
-<<<<<<< HEAD
-C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
-C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.dll
-C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.pdb
-=======
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.dll
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.pdb
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaVista.dll
@@ -105,4 +91,3 @@ C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaControlador.pdb
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\bin\Debug\CapaModelo.pdb
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
->>>>>>> eeb341413369f985114f98caf30ad9bc663aebb5
