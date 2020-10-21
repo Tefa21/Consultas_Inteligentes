@@ -179,8 +179,10 @@ namespace CapaVista.Usuario_Avanzado
                 sentencia = s1 + s2 + s3;
                 Cont.funcGuardarConsulta(sentencia, txtNombreCreacion.Text);
                 txtConsultaCreacion.Text = sentencia;
+     
                 MessageBox.Show("Consulta guardada");
                 funcVaciarCampos();
+                funcLimpiar();
             }
         }
 
@@ -193,6 +195,13 @@ namespace CapaVista.Usuario_Avanzado
             {
                 gbxLogicaCreacion.Enabled = true;
             }
+            cmbCampoComparacionCreacion.Text = "";
+            txtValorCreacion.Text = "";
+            chkAndCreacion.Checked = false;
+            chkOrCreacion.Checked = false;
+            rbtnIgualCreacion.Checked = false;
+            rbtnMayorCreacion.Checked = false;
+            rbtnMenorCreacion.Checked = false;
         }
 
         private string funcSentencia1(string s1)
@@ -357,7 +366,7 @@ namespace CapaVista.Usuario_Avanzado
             Cont.funcNuevaConsulta(nuevaConsulta , nombConsulta);
             rtxtCambioConsulta.Text = "";
             txtNombreEditar.Text = "";
-
+            funcVaciarCampos();
         }
 
         private void btnCancelarEditar_Click(object sender, EventArgs e)
@@ -367,10 +376,14 @@ namespace CapaVista.Usuario_Avanzado
 
         private void btnMostrarBuscar_Click(object sender, EventArgs e)
         {
-            string nombConsulta = txtNombreEditar.Text;
+           
+            string nombConsulta = txtNombreEjec.Text;
             string consulta = Cont.funcConsConsulta(nombConsulta);
-            DataTable cons = Cont.funcEjecucionConsulta(consulta);
-            dgvDatosMostrar.DataSource = cons;
+            if (consulta != "") {
+                DataTable cons = Cont.funcEjecucionConsulta(consulta);
+                dgvDatosMostrar.DataSource = cons;
+            }
+            
 
         }
 
@@ -407,7 +420,36 @@ namespace CapaVista.Usuario_Avanzado
             s1 = "";
             s2 = "";
             s3 = "";
+            
+        }
+        private void funcLimpiar() {
+            cmbTablasCreacion.Enabled = true;
+            btnAgregarTablaCreacion.Enabled = true;
+            txtNombreCreacion.Text = "";
+            cmbTablasCreacion.Text = "";
+            cmbCampoCreacion.Text = "";
+            txtAliasCreacion.Text = "";
             cmbCampoAgruparCreacion.Text = "";
+            cmbCampoComparacionCreacion.Text = "";
+            txtValorCreacion.Text = "";
+            chkAndCreacion.Checked = false;
+            chkDescCreacion.Checked = false;
+            chkAndCreacion.Checked = false;
+            chkOrCreacion.Checked = false;
+            rbtnIgualCreacion.Checked = false;
+            rbtnMayorCreacion.Checked = false;
+            rbtnMenorCreacion.Checked = false;
+            txtConsultaCreacion.Text = "";
+            dgvTablasCreacion.Rows.Clear();
+            dgvTablasCreacion.Refresh();
+            dgvCamposCreacion.Rows.Clear();
+            dgvCamposCreacion.Refresh();
+            txtNombreEditar.Text = "";
+            rtxtCambioConsulta.Text = "";
+            txtNombreEjec.Text = "";
+            dgvDatosMostrar.Rows.Clear();
+            dgvDatosMostrar.Refresh();
+
         }
     }
 }
