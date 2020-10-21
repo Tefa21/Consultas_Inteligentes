@@ -176,6 +176,7 @@ namespace CapaVista.Usuario_Avanzado
             sentencia = s1 + s2 + s3;
             MessageBox.Show(sentencia);
             txtConsultaCreacion.Text = sentencia;
+            funcVaciarCampos();
         }
 
         
@@ -259,34 +260,31 @@ namespace CapaVista.Usuario_Avanzado
         }
         private string funcSentencia3(string s3)
         {
-            string campoorden = cmbCampoAgruparCreacion.Text;
+            string campoorden = "";
             string orden = "";
 
-            if (chkASCCreacion.Checked == true)
+            campoorden = cmbCampoAgruparCreacion.Text;
+            if (cmbCampoAgruparCreacion.Text == "")
             {
-                if (chkDescCreacion.Checked == true)
+                if (chkASCCreacion.Checked != false || chkDescCreacion.Checked != false)
                 {
-                    MessageBox.Show("Solo se puede utilizar un orden para la consulta.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    orden = "ASC";
+                    orden = funcOrderby(orden);
                 }
             }
-            if (chkDescCreacion.Checked == true)
+            else
             {
-                if (chkASCCreacion.Checked == true)
+                if (chkASCCreacion.Checked == true || chkDescCreacion.Checked == true)
                 {
-                    MessageBox.Show("Solo se puede utilizar un orden para la consulta.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    orden = funcOrderby(orden);
+                    s3 = " GROUP BY " + campoorden + " ORDER BY " + campoorden + " " + orden + " ;";
                 }
                 else
                 {
-                    orden = "DESC";
+                    orden = funcOrderby(orden);
+                    s3 = " GROUP BY " + campoorden + " ;";
                 }
             }
             
-
-            s3 = " ORDER BY " + campoorden + " " + orden + " ;"; 
             return s3;
         }
 
@@ -338,6 +336,42 @@ namespace CapaVista.Usuario_Avanzado
             }
 
             return valorcomp;
+        }
+
+        private string funcOrderby(string orden)
+        {
+            if (chkASCCreacion.Checked == true)
+            {
+                if (chkDescCreacion.Checked == true)
+                {
+                    MessageBox.Show("Solo se puede utilizar un orden para la consulta.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    orden = "ASC";
+                }
+            }
+            else if (chkDescCreacion.Checked == true)
+            {
+                if (chkASCCreacion.Checked == true)
+                {
+                    MessageBox.Show("Solo se puede utilizar un orden para la consulta.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    orden = "DESC";
+                }
+            }
+            s3 = " ORDER BY " + orden + " ;";
+            return orden;
+        }
+
+        private void funcVaciarCampos()
+        {
+            s1 = "";
+            s2 = "";
+            s3 = "";
+            cmbCampoAgruparCreacion.Text = "";
         }
     }
 }
