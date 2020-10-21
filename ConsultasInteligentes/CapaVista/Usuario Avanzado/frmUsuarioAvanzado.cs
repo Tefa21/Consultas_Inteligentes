@@ -420,14 +420,13 @@ namespace CapaVista.Usuario_Avanzado
             s1 = "";
             s2 = "";
             s3 = "";
-<<<<<<< HEAD
+
             
         }
         private void funcLimpiar() {
             cmbTablasCreacion.Enabled = true;
             btnAgregarTablaCreacion.Enabled = true;
-=======
->>>>>>> master
+
             txtNombreCreacion.Text = "";
             cmbTablasCreacion.Text = "";
             cmbCampoCreacion.Text = "";
@@ -452,10 +451,7 @@ namespace CapaVista.Usuario_Avanzado
             txtNombreEjec.Text = "";
             dgvDatosMostrar.Rows.Clear();
             dgvDatosMostrar.Refresh();
-<<<<<<< HEAD
 
-=======
->>>>>>> master
         }
     }
 }
