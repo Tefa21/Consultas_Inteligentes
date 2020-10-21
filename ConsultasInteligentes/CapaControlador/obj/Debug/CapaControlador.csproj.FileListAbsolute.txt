@@ -25,12 +25,32 @@ C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\
 C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\Debug\CapaModelo.dll
 C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\Debug\CapaModelo.pdb
 C:\Users\stmar\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
+<<<<<<< HEAD
+=======
+C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.csprojAssemblyReference.cache
+C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CoreCompileInputs.cache
+C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.dll
+C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.pdb
+C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\Debug\CapaControlador.dll
+C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\Debug\CapaControlador.pdb
+C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\Debug\CapaModelo.dll
+C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\Debug\CapaModelo.pdb
+C:\Users\CarlosAugusto\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
+C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.csprojAssemblyReference.cache
+C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CoreCompileInputs.cache
+C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.dll
+C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.pdb
+>>>>>>> eeb341413369f985114f98caf30ad9bc663aebb5
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\Debug\CapaControlador.dll
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\Debug\CapaControlador.pdb
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\Debug\CapaModelo.dll
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\bin\Debug\CapaModelo.pdb
+<<<<<<< HEAD
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.csprojAssemblyReference.cache
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CoreCompileInputs.cache
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.dll
 C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.pdb
+=======
+C:\Users\alexs\Consultas_Inteligentes\ConsultasInteligentes\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
+>>>>>>> eeb341413369f985114f98caf30ad9bc663aebb5

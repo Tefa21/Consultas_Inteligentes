@@ -16,26 +16,33 @@ namespace CapaControlador
         clsConsultas cons = new clsConsultas();
 
 
-        public DataSet llenarCampos(string tabla)
+        public DataSet funcLlenarCampos(string tabla)
         {
-            DataSet Items = cons.llenarCampos(tabla);
+            DataSet Items = cons.funcLlenarCampos(tabla);
+            return Items;
+        }
+  
+
+        public DataTable funcItemsTablas()
+        {
+            DataTable Items = cons.funcLlenarCmbTablas();
             return Items;
         }
 
-        public DataTable ItemsTablas()
-        {
-            DataTable Items = cons.llenarCmbTablas();
-            return Items;
-        }
-
-        public DataTable ejecucionConsulta(string consulta)
+        public DataTable funcEjecucionConsulta(string consulta)
         {
 
-            OdbcDataAdapter dt = cons.ejecucionConsulta(consulta);
+            OdbcDataAdapter dt = cons.funcEjecucionConsulta(consulta);
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;
 
+        }
+
+        public DataTable funcItemsCampos(string tabla)
+        {
+            DataTable Campos = cons.funcLlenarCmbCampos(tabla);
+            return Campos;
         }
 
     }

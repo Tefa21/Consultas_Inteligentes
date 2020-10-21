@@ -39,7 +39,7 @@ namespace CapaVista.Usuario_Normal
         public void actualizardatagriew()
         {
 
-            DataSet Datos = cont.llenarCampos(tabla);
+            DataSet Datos = cont.funcLlenarCampos(tabla);
 
             //ciclo que recorre la fila de las columnas hasta que ya no hayan más
             for (int i = 0; i < Datos.Tables[0].Columns.Count; i++)
