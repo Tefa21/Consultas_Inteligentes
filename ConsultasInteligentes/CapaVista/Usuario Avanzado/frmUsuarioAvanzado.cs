@@ -193,6 +193,13 @@ namespace CapaVista.Usuario_Avanzado
             {
                 gbxLogicaCreacion.Enabled = true;
             }
+            cmbCampoComparacionCreacion.Text = "";
+            txtValorCreacion.Text = "";
+            chkAndCreacion.Checked = false;
+            chkOrCreacion.Checked = false;
+            rbtnIgualCreacion.Checked = false;
+            rbtnMayorCreacion.Checked = false;
+            rbtnMenorCreacion.Checked = false;
         }
 
         private string funcSentencia1(string s1)
@@ -357,7 +364,7 @@ namespace CapaVista.Usuario_Avanzado
             Cont.funcNuevaConsulta(nuevaConsulta , nombConsulta);
             rtxtCambioConsulta.Text = "";
             txtNombreEditar.Text = "";
-
+            funcVaciarCampos();
         }
 
         private void btnCancelarEditar_Click(object sender, EventArgs e)
@@ -407,7 +414,30 @@ namespace CapaVista.Usuario_Avanzado
             s1 = "";
             s2 = "";
             s3 = "";
+            txtNombreCreacion.Text = "";
+            cmbTablasCreacion.Text = "";
+            cmbCampoCreacion.Text = "";
+            txtAliasCreacion.Text = "";
             cmbCampoAgruparCreacion.Text = "";
+            cmbCampoComparacionCreacion.Text = "";
+            txtValorCreacion.Text = "";
+            chkAndCreacion.Checked = false;
+            chkDescCreacion.Checked = false;
+            chkAndCreacion.Checked = false;
+            chkOrCreacion.Checked = false;
+            rbtnIgualCreacion.Checked = false;
+            rbtnMayorCreacion.Checked = false;
+            rbtnMenorCreacion.Checked = false;
+            txtConsultaCreacion.Text = "";
+            dgvTablasCreacion.Rows.Clear();
+            dgvTablasCreacion.Refresh();
+            dgvCamposCreacion.Rows.Clear();
+            dgvCamposCreacion.Refresh();
+            txtNombreEditar.Text = "";
+            rtxtCambioConsulta.Text = "";
+            txtNombreEjec.Text = "";
+            dgvDatosMostrar.Rows.Clear();
+            dgvDatosMostrar.Refresh();
         }
     }
 }
