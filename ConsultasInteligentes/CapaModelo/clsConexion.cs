@@ -15,7 +15,7 @@ namespace CapaModelo
         public OdbcConnection funcConexion()
         {
             //creacion de la conexion via ODBC
-            OdbcConnection conexion = new OdbcConnection("Dsn=Prueba");
+            OdbcConnection conexion = new OdbcConnection("Dsn=clc_erp");
             try
             {
                 conexion.Open();
