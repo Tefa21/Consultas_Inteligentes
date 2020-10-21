@@ -45,7 +45,46 @@ namespace CapaModelo
 
         }
 
-        
+        public string funcLlamarConsulta(string nombre) {
+
+            string Query_SELECT = "SELECT contenido_consulta_inteligente FROM consulta_inteligente as con WHERE con.nombre_consulta_inteligente = '"+ nombre + "' ";
+            OdbcCommand Ejecucion_Query = new OdbcCommand(Query_SELECT, conexion.funcConexion());
+            OdbcDataReader Lector = Ejecucion_Query.ExecuteReader();
+
+            string consulta=""; 
+
+            if (Lector.HasRows == true)
+            {
+                while (Lector.Read())
+                {
+                    consulta = Lector.GetString(0);
+                }    
+            }
+            else
+            {
+                MessageBox.Show("Nombre no encontrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return consulta;
+
+        }
+
+        public void funcActualizarConsulta(string nuevaConsulta, string nombre)
+        {
+            string Query_SELECT = "UPDATE consulta_inteligente SET contenido_consulta_inteligente='" + nuevaConsulta + "' WHERE nombre_consulta_inteligente ='" + nombre + "'";
+            OdbcCommand Query_UPDATE1 = new OdbcCommand(Query_SELECT, conexion.funcConexion());
+            Query_UPDATE1.ExecuteNonQuery();
+            MessageBox.Show("Modificación Exitosa","Consultas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+        public void funcCnsGuardarConsulta(string consulta, string nombre)
+        {
+           char comillas='"';
+           string guardarConsulta = "INSERT INTO consulta_inteligente (nombre_consulta_inteligente , contenido_consulta_inteligente) VALUES ('"+ nombre + "',"+ comillas + ""+consulta+ ""+comillas+")";
+           OdbcCommand Query_Validacion1 = new OdbcCommand(guardarConsulta, conexion.funcConexion());
+           Query_Validacion1.ExecuteNonQuery();
+
+        }
+
 
         public OdbcDataAdapter funcEjecucionConsulta(string consulta)
         {

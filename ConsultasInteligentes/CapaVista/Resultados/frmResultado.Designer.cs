@@ -72,7 +72,7 @@
             this.rbtnMenorMayorCreacion.AutoSize = true;
             this.rbtnMenorMayorCreacion.Location = new System.Drawing.Point(17, 52);
             this.rbtnMenorMayorCreacion.Name = "rbtnMenorMayorCreacion";
-            this.rbtnMenorMayorCreacion.Size = new System.Drawing.Size(127, 21);
+            this.rbtnMenorMayorCreacion.Size = new System.Drawing.Size(103, 17);
             this.rbtnMenorMayorCreacion.TabIndex = 1;
             this.rbtnMenorMayorCreacion.TabStop = true;
             this.rbtnMenorMayorCreacion.Text = "Menor a Mayor";
@@ -83,7 +83,7 @@
             this.rbtnMayorMenorCreacion.AutoSize = true;
             this.rbtnMayorMenorCreacion.Location = new System.Drawing.Point(17, 29);
             this.rbtnMayorMenorCreacion.Name = "rbtnMayorMenorCreacion";
-            this.rbtnMayorMenorCreacion.Size = new System.Drawing.Size(127, 21);
+            this.rbtnMayorMenorCreacion.Size = new System.Drawing.Size(103, 17);
             this.rbtnMayorMenorCreacion.TabIndex = 0;
             this.rbtnMayorMenorCreacion.TabStop = true;
             this.rbtnMayorMenorCreacion.Text = "Mayor a Menor";
@@ -91,7 +91,7 @@
             // 
             // frmResultado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnMostrarBuscar);
@@ -112,11 +112,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvDatosMostrar;
         private System.Windows.Forms.Button btnMostrarBuscar;
         private System.Windows.Forms.GroupBox gbxOrdenCreacion;
         private System.Windows.Forms.RadioButton rbtnMenorMayorCreacion;
         private System.Windows.Forms.RadioButton rbtnMayorMenorCreacion;
+        private System.Windows.Forms.DataGridView dgvDatosMostrar;
     }
 }
