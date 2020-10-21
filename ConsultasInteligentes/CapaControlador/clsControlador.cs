@@ -21,7 +21,7 @@ namespace CapaControlador
             DataSet Items = cons.funcLlenarCampos(tabla);
             return Items;
         }
-  
+
 
         public DataTable funcItemsTablas()
         {
@@ -44,6 +44,21 @@ namespace CapaControlador
             DataTable Campos = cons.funcLlenarCmbCampos(tabla);
             return Campos;
         }
+        public string funcConsConsulta(string nombre)
+        {
+            nombre = cons.funcLlamarConsulta(nombre);
 
+            return nombre;
+        }
+
+        public void funcNuevaConsulta(string nuevaConsulta, string nombre) {
+            cons.funcActualizarConsulta(nuevaConsulta, nombre);
+        
+        }
+        public void funcGuardarConsulta(string consulta, string nombre) {
+
+            cons.funcCnsGuardarConsulta(consulta, nombre);
+        }
+       
     }
 }

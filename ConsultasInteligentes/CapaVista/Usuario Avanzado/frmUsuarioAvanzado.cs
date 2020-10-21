@@ -167,16 +167,21 @@ namespace CapaVista.Usuario_Avanzado
 
         private void btnGuardarCreacion_Click(object sender, EventArgs e)
         {
-            s1 = funcSentencia1(s1);
-            s3 = funcSentencia3(s3);
-            if (s3 == "")
+            if (txtNombreCreacion.Text == "") { MessageBox.Show("Debe ingresar un nombre para la consulta"); }
+            else
             {
-                s3 = ";";
+                s1 = funcSentencia1(s1);
+                s3 = funcSentencia3(s3);
+                if (s3 == "")
+                {
+                    s3 = ";";
+                }
+                sentencia = s1 + s2 + s3;
+                Cont.funcGuardarConsulta(sentencia, txtNombreCreacion.Text);
+                txtConsultaCreacion.Text = sentencia;
+                MessageBox.Show("Consulta guardada");
+                funcVaciarCampos();
             }
-            sentencia = s1 + s2 + s3;
-            MessageBox.Show(sentencia);
-            txtConsultaCreacion.Text = sentencia;
-            funcVaciarCampos();
         }
 
         
@@ -221,7 +226,7 @@ namespace CapaVista.Usuario_Avanzado
                 campocomp = funcCampocomp(campocomp);
                 comparador = funcComparador(comparador);
                 valorcomp = funcValorcomp(valorcomp);
-                s2 = " WHERE " + campocomp + " " + comparador + " " + valorcomp;
+                s2 = " WHERE " + campocomp + " " + comparador + " '" + valorcomp+"'";
             }
             else
             {
@@ -236,7 +241,7 @@ namespace CapaVista.Usuario_Avanzado
                     }
                     else
                     {
-                        s2 = s2 + " AND " + campocomp + " " + comparador + " " + valorcomp;
+                        s2 = s2 + " AND " + campocomp + " " + comparador + " '" + valorcomp+"'";
                     }
                 }
                 else if (chkOrCreacion.Checked == true)
@@ -248,7 +253,7 @@ namespace CapaVista.Usuario_Avanzado
                     }
                     else
                     {
-                        s2 = s2 + " OR " + campocomp + " " + comparador + " " + valorcomp;
+                        s2 = s2 + " OR " + campocomp + " " + comparador + " '" + valorcomp+"'";
                     }
                 }
                 else
@@ -336,6 +341,37 @@ namespace CapaVista.Usuario_Avanzado
             }
 
             return valorcomp;
+        }
+
+        private void btnBuscarConsultaEditar_Click(object sender, EventArgs e)
+        {
+            string nombConsulta = txtNombreEditar.Text;
+
+            rtxtCambioConsulta.Text = Cont.funcConsConsulta(nombConsulta);
+        }
+
+        private void btnGuardarEditar_Click(object sender, EventArgs e)
+        {
+            string nombConsulta = txtNombreEditar.Text;
+            string nuevaConsulta = rtxtCambioConsulta.Text;
+            Cont.funcNuevaConsulta(nuevaConsulta , nombConsulta);
+            rtxtCambioConsulta.Text = "";
+            txtNombreEditar.Text = "";
+
+        }
+
+        private void btnCancelarEditar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMostrarBuscar_Click(object sender, EventArgs e)
+        {
+            string nombConsulta = txtNombreEditar.Text;
+            string consulta = Cont.funcConsConsulta(nombConsulta);
+            DataTable cons = Cont.funcEjecucionConsulta(consulta);
+            dgvDatosMostrar.DataSource = cons;
+
         }
 
         private string funcOrderby(string orden)
