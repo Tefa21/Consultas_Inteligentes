@@ -19,10 +19,17 @@ namespace CapaVista.Resultados
         clsControlador cont = new clsControlador();
         private void frmResultado_Load(object sender, EventArgs e)
         {
+            try{
 
             DataTable dt = cont.funcEjecucionConsulta(clsDatoConsulta.consulta);
             dgvDatosMostrar.DataSource = dt;
 
+
+            }catch (Exception ex) {
+                MessageBox.Show("NO ha ingresado los datos correctos para generar la consulta, revise y vuelva a intentarlo ", "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }//fin try catch
 
         }
     }

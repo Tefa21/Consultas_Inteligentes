@@ -28,6 +28,8 @@ namespace CapaVista.Usuario_Normal
         //nombre de la tabla de prueba
         string tabla;
 
+
+
         public frmUsuarioNormal(string Tabla)
         {
             tabla = Tabla;
@@ -60,11 +62,8 @@ namespace CapaVista.Usuario_Normal
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al ejecutar SQL: " +
-                     System.Environment.NewLine + System.Environment.NewLine +
-                     ex.GetType().ToString() + System.Environment.NewLine +
-                     ex.Message, "Error",
-                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe de Seleccionar un dato de la tabla, NO el encabezado de la tabla ", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
     
         }
@@ -88,9 +87,51 @@ namespace CapaVista.Usuario_Normal
                 operador = "=";
             }
 
-            //variable global que arma toda la consulta 
-            clsDatoConsulta.consulta = "SELECT * FROM " + tabla + " WHERE " + campo + " " + operador + " " + ValorComparar + ";";
+            //ciclo if para verificar la cadena que se ingresa con las opciones dadas en los radiobuttons
+            if (funcIsNumeric(ValorComparar) == false && (rbtnMayorCreacion.Checked == true || rbtnMenorCreacion.Checked == true))
+            {
 
+                MessageBox.Show("Verifique el tipo de opción para generar la consulta", "Error",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                //condicion if para mostrar la consulta sin comillas simples ya que muestra los valores al ingresar una cadena de texto
+                // que sea un número y compararla con un mayor
+                if (rbtnMayorCreacion.Checked == true)
+                {
+                    //variable que arma toda la consulta 
+                    clsDatoConsulta.consulta = "SELECT * FROM " + tabla + " WHERE " + campo + " " + operador + " " + ValorComparar + ";";
+                    frmResultado frmSr = new frmResultado();
+                    frmSr.Show();
+
+
+                }
+                else
+                {
+                    //variable que arma toda la consulta 
+                    clsDatoConsulta.consulta = "SELECT * FROM " + tabla + " WHERE " + campo + " " + operador + " '" + ValorComparar + "';";
+                    frmResultado frmSr = new frmResultado();
+                    frmSr.Show();
+                }
+
+            }
+
+
+        }
+
+
+
+        //función para verificar si una variable es solamente una cadena de números o una cadena de texto
+        public bool funcIsNumeric(object Expression)
+
+        {
+
+            bool isNum;
+            double retNum;
+            isNum = Double.TryParse(Convert.ToString(Expression), System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out retNum);
+            return isNum;
 
         }
 
@@ -103,8 +144,7 @@ namespace CapaVista.Usuario_Normal
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else{
                 creacionConsulta();
-                frmResultado frmSr = new frmResultado();
-                frmSr.Show();
+                
             }
 
         }
@@ -112,6 +152,12 @@ namespace CapaVista.Usuario_Normal
         private void btnCancelarCreacion_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmUsuarioNormal_Load(object sender, EventArgs e)
+        {
+            //Se limpia la selección automática en la celda del datagrid que aparece al ejecutar la ventana en
+            dgvCamposCreacion.ClearSelection();
         }
     }
 }
