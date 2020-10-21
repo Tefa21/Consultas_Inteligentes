@@ -70,7 +70,8 @@ namespace CapaModelo
 
         public void funcActualizarConsulta(string nuevaConsulta, string nombre)
         {
-            string Query_SELECT = "UPDATE consulta_inteligente SET contenido_consulta_inteligente='" + nuevaConsulta + "' WHERE nombre_consulta_inteligente ='" + nombre + "'";
+            char comillas = '"';
+            string Query_SELECT = "UPDATE consulta_inteligente SET contenido_consulta_inteligente="+ comillas + "" + nuevaConsulta + ""+comillas+"WHERE nombre_consulta_inteligente ='" + nombre + "'";
             OdbcCommand Query_UPDATE1 = new OdbcCommand(Query_SELECT, conexion.funcConexion());
             Query_UPDATE1.ExecuteNonQuery();
             MessageBox.Show("Modificación Exitosa","Consultas", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -90,6 +91,7 @@ namespace CapaModelo
         {
             string Query_SELECT = consulta;
             OdbcDataAdapter tablaDatos = new OdbcDataAdapter(Query_SELECT, conexion.funcConexion());
+
             return tablaDatos;
         }
 

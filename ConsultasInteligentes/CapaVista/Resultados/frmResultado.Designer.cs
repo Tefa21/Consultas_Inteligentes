@@ -28,14 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResultado));
             this.dgvDatosMostrar = new System.Windows.Forms.DataGridView();
-            this.btnMostrarBuscar = new System.Windows.Forms.Button();
-            this.gbxOrdenCreacion = new System.Windows.Forms.GroupBox();
-            this.rbtnMenorMayorCreacion = new System.Windows.Forms.RadioButton();
-            this.rbtnMayorMenorCreacion = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosMostrar)).BeginInit();
-            this.gbxOrdenCreacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvDatosMostrar
@@ -47,55 +42,22 @@
             this.dgvDatosMostrar.Size = new System.Drawing.Size(776, 318);
             this.dgvDatosMostrar.TabIndex = 4;
             // 
-            // btnMostrarBuscar
+            // label1
             // 
-            this.btnMostrarBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnMostrarBuscar.Image")));
-            this.btnMostrarBuscar.Location = new System.Drawing.Point(560, 41);
-            this.btnMostrarBuscar.Name = "btnMostrarBuscar";
-            this.btnMostrarBuscar.Size = new System.Drawing.Size(48, 33);
-            this.btnMostrarBuscar.TabIndex = 2;
-            this.btnMostrarBuscar.UseVisualStyleBackColor = true;
-            // 
-            // gbxOrdenCreacion
-            // 
-            this.gbxOrdenCreacion.Controls.Add(this.rbtnMenorMayorCreacion);
-            this.gbxOrdenCreacion.Controls.Add(this.rbtnMayorMenorCreacion);
-            this.gbxOrdenCreacion.Location = new System.Drawing.Point(645, 12);
-            this.gbxOrdenCreacion.Name = "gbxOrdenCreacion";
-            this.gbxOrdenCreacion.Size = new System.Drawing.Size(143, 88);
-            this.gbxOrdenCreacion.TabIndex = 16;
-            this.gbxOrdenCreacion.TabStop = false;
-            this.gbxOrdenCreacion.Text = "Orden de la Consulta";
-            // 
-            // rbtnMenorMayorCreacion
-            // 
-            this.rbtnMenorMayorCreacion.AutoSize = true;
-            this.rbtnMenorMayorCreacion.Location = new System.Drawing.Point(17, 52);
-            this.rbtnMenorMayorCreacion.Name = "rbtnMenorMayorCreacion";
-            this.rbtnMenorMayorCreacion.Size = new System.Drawing.Size(103, 17);
-            this.rbtnMenorMayorCreacion.TabIndex = 1;
-            this.rbtnMenorMayorCreacion.TabStop = true;
-            this.rbtnMenorMayorCreacion.Text = "Menor a Mayor";
-            this.rbtnMenorMayorCreacion.UseVisualStyleBackColor = true;
-            // 
-            // rbtnMayorMenorCreacion
-            // 
-            this.rbtnMayorMenorCreacion.AutoSize = true;
-            this.rbtnMayorMenorCreacion.Location = new System.Drawing.Point(17, 29);
-            this.rbtnMayorMenorCreacion.Name = "rbtnMayorMenorCreacion";
-            this.rbtnMayorMenorCreacion.Size = new System.Drawing.Size(103, 17);
-            this.rbtnMayorMenorCreacion.TabIndex = 0;
-            this.rbtnMayorMenorCreacion.TabStop = true;
-            this.rbtnMayorMenorCreacion.Text = "Mayor a Menor";
-            this.rbtnMayorMenorCreacion.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Rockwell", 14F);
+            this.label1.Location = new System.Drawing.Point(281, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(226, 27);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Resultado Consulta";
             // 
             // frmResultado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnMostrarBuscar);
-            this.Controls.Add(this.gbxOrdenCreacion);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDatosMostrar);
             this.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
@@ -105,17 +67,13 @@
             this.Text = "Resultado de la Consulta";
             this.Load += new System.EventHandler(this.frmResultado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosMostrar)).EndInit();
-            this.gbxOrdenCreacion.ResumeLayout(false);
-            this.gbxOrdenCreacion.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnMostrarBuscar;
-        private System.Windows.Forms.GroupBox gbxOrdenCreacion;
-        private System.Windows.Forms.RadioButton rbtnMenorMayorCreacion;
-        private System.Windows.Forms.RadioButton rbtnMayorMenorCreacion;
         private System.Windows.Forms.DataGridView dgvDatosMostrar;
+        private System.Windows.Forms.Label label1;
     }
 }

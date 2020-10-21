@@ -179,8 +179,10 @@ namespace CapaVista.Usuario_Avanzado
                 sentencia = s1 + s2 + s3;
                 Cont.funcGuardarConsulta(sentencia, txtNombreCreacion.Text);
                 txtConsultaCreacion.Text = sentencia;
+     
                 MessageBox.Show("Consulta guardada");
                 funcVaciarCampos();
+                funcLimpiar();
             }
         }
 
@@ -374,10 +376,14 @@ namespace CapaVista.Usuario_Avanzado
 
         private void btnMostrarBuscar_Click(object sender, EventArgs e)
         {
-            string nombConsulta = txtNombreEditar.Text;
+           
+            string nombConsulta = txtNombreEjec.Text;
             string consulta = Cont.funcConsConsulta(nombConsulta);
-            DataTable cons = Cont.funcEjecucionConsulta(consulta);
-            dgvDatosMostrar.DataSource = cons;
+            if (consulta != "") {
+                DataTable cons = Cont.funcEjecucionConsulta(consulta);
+                dgvDatosMostrar.DataSource = cons;
+            }
+            
 
         }
 
@@ -414,6 +420,14 @@ namespace CapaVista.Usuario_Avanzado
             s1 = "";
             s2 = "";
             s3 = "";
+<<<<<<< HEAD
+            
+        }
+        private void funcLimpiar() {
+            cmbTablasCreacion.Enabled = true;
+            btnAgregarTablaCreacion.Enabled = true;
+=======
+>>>>>>> master
             txtNombreCreacion.Text = "";
             cmbTablasCreacion.Text = "";
             cmbCampoCreacion.Text = "";
@@ -438,6 +452,10 @@ namespace CapaVista.Usuario_Avanzado
             txtNombreEjec.Text = "";
             dgvDatosMostrar.Rows.Clear();
             dgvDatosMostrar.Refresh();
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
         }
     }
 }
